@@ -1,4 +1,32 @@
 
+=== Pass Statement
+
+The pass statement does nothing. It can be used when a statement is required syntactically but the program requires no action. For example:
+
+[source]
+----
+while True:
+    pass
+----
+
+This is an _infinite loop_!
+
+`pass` is commonly used for creating minimal classes:
+
+[source]
+----
+class MyEmptyClass:
+    pass
+----
+
+Another place pass can be used is as a place-holder for a function or conditional body when you are working on new code, allowing you to keep thinking at a more abstract level. The pass is silently ignored:
+
+[source]
+----
+def initSomething(*args):
+    pass
+----
+
 === Break Statement
 
 Normally, a loop exits when its condition becomes false. But we can force the exit at any time using the special *break* statement.

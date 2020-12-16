@@ -10,55 +10,54 @@ The first conditional statement  is the *if* statement.
 
 [source]
 ----
-if (something-is-true) doSomething;
+if (something-is-true):
+    doSomething()
 ----
 
 Here are a few simple examples.
 
 [source]
 ----
-if (speed > speedLimit) 
-    driver.getsATicket();
+if (speed > speedLimit) :
+    driver.getsATicket()
 
-if (x <= -1) 
-    print("Cannot have negative numbers!");
+if (x <= -1) :
+    print("Cannot have negative numbers!")
 
-if (account.balance >= amountRequested) {
-    subtract(account, amountRequested);
-    produceCash(ammountRequested);
-    printReceipt(amountRequested);
-}
+if (account.balance >= amountRequested) :
+    subtract(account, amountRequested)
+    produceCash(amountRequested)
+    printReceipt(amountRequested)
 ----
 
 Python also has an *else* part to the *if* statement. When the *if* condition is False, the else part gets run. Here, if the account doesn't have enough money to fulfill the amountRequested, the else part of the statement gets run, and the customer gets an insufficient funds receipt.
 
 [source]
 ----
-if (account.balance >= amountRequested) {
-    # customer have money
-} else {
+if (account.balance >= amountRequested):
+    # customer has the money
+else:
     printReceipt("Sorry, you don't have enough money in your account!")
-}
 ----
 
-Python can also "nest" if statements, making them very flexible for complicated situations. You can also see here how curly-braces make it clear what statements get excuted based on which case or condition is true.
+Python can also "nest" if statements, making them very flexible for complicated situations. You can also see here how the `elif` works.
+There can be zero or more `elif` parts, and the `else` part is optional. 
 
 [source]
 ----
-timeOfDay = "Afternoon";
+timeOfDay = "Afternoon"
 
-if (timeOfDay === "Morning") {
-    print("Time to eat breakfast");
-    eatCereal();
-} else if (timeOfDay === "Afternoon") {
-    print("Time to eat lunch");
-    haveASandwich();
-} else {
-    print("Time to eat dinner");
-    makeDinner();
-    eatDinner();
-    doDishes();
-}
+if (timeOfDay === "Morning"):
+    print("Time to eat breakfast")
+    eatCereal()
+elif (timeOfDay === "Afternoon"):
+    print("Time to eat lunch")
+    haveASandwich()
+else:
+    print("Time to eat dinner")
+    makeDinner()
+    eatDinner()
+    doDishes()
 ----
 
 Notice how this becomes a 3-way choice, depending on the timeOfDay.
@@ -77,14 +76,13 @@ Finally, make sure to change the value of the age variable in the repl, to outpu
 
 [source]
 ----
-userAge = 17;
-if (userAge < 18) {
-    print("Cannot party with us");
-} else if (userAge >= 18) {
-    print("Party over here");
-} else {
-    print("I do not recognize your age");
-}
+userAge = 17
+if userAge < 18:
+    print("Cannot party with us")
+elif userAge >= 18:
+    print("Party over here")
+else:
+    print("I do not recognize your age")
 ----
 
 If statements are one of the most commonly used statements to express logic in a Python program. It's important to know them well.

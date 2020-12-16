@@ -180,3 +180,7 @@ playerOneName = 'Rocco'
 Now, you try it. Write down a variable name and assign
 a normal value to it.
 
+=== Data Structures
+
+Python has a series of different _data structures_ built into the language. 
+Its built-in data structures include lists, tuples, sets, and dictionaries.

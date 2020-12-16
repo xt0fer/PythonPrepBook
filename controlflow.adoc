@@ -5,25 +5,24 @@ In many of these examples so far, we see a very simple *control flow*. The progr
 
 [source]
 ----
-q = 0; 
-j = 5;
-q = j * 4 - 20;
-print(q); # -> 0
+q = 0
+j = 5
+q = j * 4 - 20
+print(q) # -> 0
 ----
 
 When programs start to get more sophisticated, the _control flow_ can be changed. There are various conditional statements, loop statements, and functions that can cause the control flow to move around within the code. Here we see using both a loop and a conditional IF statement to change the flow of control.
 
 [source]
 ----
-q = 0; 
-j = 5;
-while (j > 0) {
-    q = j * 4 - 20;
-    print(q);
-    if (q > 0) {
-        print("q is still positive");
-    }
-}
+q = 0
+j = 6
+while (j > 0) :
+    q = j * 4 - 20
+    print(q)
+    j -= 1  # Hey! this how you can decrement by 1
+    if (q > 0) :
+        print("q is still positive")
 ----
 
 This ability to manipulate the control flow of a program is very important when you start developing logic for your apps and programs. Logic in programs depends heavily on being able to manipulate the control flows through the code. Let's take a look at how each kind of statement allows a programmer to change the flow of control in programs.
