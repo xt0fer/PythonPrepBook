@@ -22,9 +22,9 @@ is to
 # And in Python:
 # a = b3 - 6 
 
-b = 3;
-a = b * 3 - 6;
-print(a); # -> 3
+b = 3
+a = b * 3 - 6
+print(a) # -> 3
 ----
 
 Now you try it. 
@@ -42,10 +42,10 @@ Take a moment and write down your solution before reading on.
 
 [source]
 ----
-q = 0; 
-j = 5;
-q = 2 * j + 20;
-print(q); # -> 30
+q = 0
+j = 5
+q = 2 * j + 20
+print(q) # -> 30
 ----
 
 Let's try another...
@@ -65,9 +65,11 @@ and print out x.
 My solution is pretty simple.
 [source]
 ----
-y = 2; 
-x = 5 * y + Math.pow(y, 3) - 7;
-print(x); # -> 11
+import math # if you haven't already!
+
+y = 2
+x = 5 * y + math.pow(y, 3) - 7
+print(x) # -> 11
 ----
 
 === _Trigonometry_
@@ -90,10 +92,10 @@ Formula: A = h * b / 2
 
 [source]
 ----
-height = 20;
-base = 10;	
-areaOfaTriangle  =  height * base / 2;
-print(areaOfaTriangle); # -> 100
+height = 20
+base = 10	
+areaOfaTriangle  =  height * base / 2
+print(areaOfaTriangle) # -> 100
 ----
 
 
@@ -107,9 +109,9 @@ Hint: You'll need to use a constant Math property!
 
 [source]
 ----
-radius = 7.7;	
-area  =  Math.PI * Math.pow(radius, 2);
-print(area); # -> 186.26502843133886 (wow)
+radius = 7.7	
+area  =  math.pi * math.pow(radius, 2)
+print(area) # -> 186.26502843133886 (wow)
 ----
 
 

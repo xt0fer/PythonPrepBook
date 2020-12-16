@@ -69,7 +69,7 @@ function checkStatus(vehicle) {
         if (vehicle.Speed > 10) {
             s = dead;
         }
-        if (vehicle.Speed < 10 && vehicle.Speed > 3) {
+        if (vehicle.Speed < 10 and vehicle.Speed > 3) {
             s = crashed;
         }
 

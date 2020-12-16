@@ -37,7 +37,7 @@ Here are some strings for you to consider.
 "On sale for $123.99!!"
 "Pi is approximately 3.14159"
 "Merge left at the ramp to the right, the restaurant is on the right"
-"He said, \"Wait there is more!\""
+'He said, "Wait there is more!"'
 ----
 
 Think of strings as a tightly packed list. Each item and letter is numbered. 
@@ -56,7 +56,7 @@ Computers often start numbering things like strings, lists, and arrays at 0, not
 
 [source]
 ----
-name = "Wacka Flocka";
+name = "Wacka Flocka"
 ----
 
 Now we have a string variable named *name* and it's value is "Wacka Flocka".
@@ -65,13 +65,13 @@ Now we have a string variable named *name* and it's value is "Wacka Flocka".
 
 A common and often used string property is *length*.
 
-We can use `.length` to find the length of a string
+We can use `len()` builtin function to find the length of a string
 
 [source]
 ----
-str = "Wakanda Forever!";
-answer = str.length;
-print(answer); # -> 16
+motto = "Wakanda Forever!"
+answer = len(motto)
+print(answer) # -> 16
 ----
 
 === Accessing Characters in a String
@@ -80,13 +80,13 @@ As mentioned before, we can reach into a string and copy out the stuff we find t
 
 [source]
 ----
-word = "Hello";
-# Access the the first character (first by index, second by function)
-print(word[0]); # H
-print(word.charAt(0)); # H
+word = "Hello"
+
+# Access the the first character by _indexing_
+print(word[0]) # H
+
 # the last character
-print(word[word.length - 1]); # o
-print(word.charAt(word.length - 1)); # o
+print(word[len(word) - 1]) # o
 ----
 
 When you see something like *word[0]*, it is pronounced like "word sub zero". If you have
@@ -94,27 +94,25 @@ When you see something like *word[0]*, it is pronounced like "word sub zero". If
 
 === String Concatenation (Joining strings)
 
-This simply means joining strings together using the + operator or the concat( ) method-function. Either one is commonly used. 
+This simply means joining strings together using the + operator. We have to turn the 20 (which is a number) into a string. We do this by calling the builtin `str()` function.
 
 [source]
 ----
-price = 20;
-dollarSign = "$";
-priceTag = dollarSign + price; # $20
-//or
-priceTag = dollarSign.concat(price); # $20
-print(priceTag); # -> $20
+price = 20
+dollarSign = "$"
+priceTag = dollarSign + str(price) # $20
+
 ----
 
 Or perhaps a little more useful example:
 
 [source]
 ----
-name = "Mikaila";
-hoursWorked = 12;
+name = "Mikaila"
+hoursWorked = str(12)
 
 workReport = "Today, " + name + " worked a total of " + hoursWorked + " hours."
-print(workReport);
+print(workReport)
 ----
 
 The output would be:
