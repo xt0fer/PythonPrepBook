@@ -19,12 +19,12 @@ is to
 
 [source]
 ----
-// And in Python:
-// a = b3 - 6 
+# And in Python:
+# a = b3 - 6 
 
-let b = 3;
-let a = b * 3 - 6;
-console.log(a); // -> 3
+b = 3;
+a = b * 3 - 6;
+print(a); # -> 3
 ----
 
 Now you try it. 
@@ -42,10 +42,10 @@ Take a moment and write down your solution before reading on.
 
 [source]
 ----
-let q = 0; 
-let j = 5;
+q = 0; 
+j = 5;
 q = 2 * j + 20;
-console.log(q); // -> 30
+print(q); # -> 30
 ----
 
 Let's try another...
@@ -65,9 +65,9 @@ and print out x.
 My solution is pretty simple.
 [source]
 ----
-let y = 2; 
-let x = 5 * y + Math.pow(y, 3) - 7;
-console.log(x); // -> 11
+y = 2; 
+x = 5 * y + Math.pow(y, 3) - 7;
+print(x); # -> 11
 ----
 
 === _Trigonometry_
@@ -90,10 +90,10 @@ Formula: A = h * b / 2
 
 [source]
 ----
-let height = 20;
-let base = 10;	
-let areaOfaTriangle  =  height * base / 2;
-console.log(areaOfaTriangle); // -> 100
+height = 20;
+base = 10;	
+areaOfaTriangle  =  height * base / 2;
+print(areaOfaTriangle); # -> 100
 ----
 
 
@@ -107,9 +107,9 @@ Hint: You'll need to use a constant Math property!
 
 [source]
 ----
-let radius = 7.7;	
-let area  =  Math.PI * Math.pow(radius, 2);
-console.log(area); // -> 186.26502843133886 (wow)
+radius = 7.7;	
+area  =  Math.PI * Math.pow(radius, 2);
+print(area); # -> 186.26502843133886 (wow)
 ----
 
 

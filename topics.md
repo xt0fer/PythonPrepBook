@@ -1,6 +1,6 @@
 # Topics
 
-- console.log()
+- print()
 - variables and data types
 - operators
 - arithmetic expressions
@@ -17,7 +17,7 @@
   - functions
   - return
 - modules?
-- objects/methods
+- objects/method-functions
 
 
 ## Attributes of Topics

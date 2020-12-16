@@ -6,8 +6,8 @@ As you have seen, _functions_ are used to make code more understandable, cleaner
 
 [source]
 ----
-let minorHit = 3;
-let majorHit = 7;
+minorHit = 3;
+majorHit = 7;
 
 function adjustHealth(player, hit) {
     player.health = player.health - hit;
@@ -22,7 +22,7 @@ function adjustHealth(player, hit) {
 function isAlive(player, hit) {
     if (player.health >= 20) {
         return true;
-    } else { // player has died!
+    } else { # player has died!
         return false;
     }
 } 
@@ -33,7 +33,7 @@ If someplace in our code we were to do something like:
 
 [source]
 ----
-// big hit!
+# big hit!
 continuePlaying = adjustHealth(playerOne, majorHit);
 
 if (continuePlaying == playerDead) endGame();

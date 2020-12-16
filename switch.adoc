@@ -10,14 +10,14 @@ Notice how we first get a command from the user, look at each possibility, and d
 
 [source, js]
 ----
-let lastCommand = getCommandFromUser();
+lastCommand = getCommandFromUser();
 
 switch(lastCommand){
     case "exit": 
-        console.log("so long!");
+        print("so long!");
         break;
     case "run":
-        console.log("running simulation...");
+        print("running simulation...");
         runSim();
         break;
     case: "rename":
@@ -27,7 +27,7 @@ switch(lastCommand){
         if (makeSureDeleteIsOkay()) {
             deleteSim();
         } else {
-           console.log("delete cancelled..."); 
+           print("delete cancelled..."); 
         }
         break;
     case: "new":
@@ -37,7 +37,7 @@ switch(lastCommand){
         showHelpToUser();
         break;
     default:
-        console.log("command not found: try again or type help");
+        print("command not found: try again or type help");
 }
 ----
 

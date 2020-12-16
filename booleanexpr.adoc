@@ -35,7 +35,7 @@ We also need more kinds of boolean expressions when we are programming. Things l
 
 [source, Python]
 ----
-let healthScore = 5;
+healthScore = 5;
 ----
 
 We need a way to ask about expressions like "is healthScore less than 7?? (very healthy)" or
@@ -60,14 +60,14 @@ Each of these can be used to make it very clear to someone reading your code wha
 
 [source]
 ----
-altitude > 500.0   // high enough to not hit any trees!
-airspeed >= 85.0   // fast enough to stay in the air.
+altitude > 500.0   # high enough to not hit any trees!
+airspeed >= 85.0   # fast enough to stay in the air.
 
-fuelAvailable <= 5.0   // need to land to refuel!
+fuelAvailable <= 5.0   # need to land to refuel!
 
-totalCargoWeight < 6.0  // more than 6 tons and we can't take off!
+totalCargoWeight < 6.0  # more than 6 tons and we can't take off!
 
-pilot.isAlive() && copilot.isAlive()  // everything is fine, keep flying.
+pilot.isAlive() && copilot.isAlive()  # everything is fine, keep flying.
 ----
 
 If you're puzzling about the difference between the '===' equals and the '==' equals, until you learn a lot more about Python, just use the triple '===' equals. That goes for the 'not equals' too; always use the '!==' not equals.
@@ -89,7 +89,7 @@ The AND operator, '&&', is an operator where BOTH sides have to be true for the 
 
 [source]
 ----
-(5 < 9) && (6-3 === 3)  // true
+(5 < 9) && (6-3 === 3)  # true
 ----
 
 See how both expressions on either side of the '&&' are true? That makes the entire line true.
@@ -99,11 +99,11 @@ The OR operator, '||' footnote:[shift-backslash '\' on most keyboards], is an op
 
 [source]
 ----
-(5 < 9) || (6-3 === 3) // true
+(5 < 9) || (6-3 === 3) # true
 
-(5 === 4) || (7 > 3)   // true!
+(5 === 4) || (7 > 3)   # true!
 
-(5 === 4) || (6 === 2) // false (both are false)
+(5 === 4) || (6 === 2) # false (both are false)
 ----
 
 Both sides of a logical operator need to be Boolean expressions. So it's all right to
@@ -111,7 +111,7 @@ use lots of different comparisons, and combine them with && and ||.
 
 [source]
 ----
-// deep in a cash machine application...
+# deep in a cash machine application...
 (customer.balance() <= 20.00 
 &&
 customer.hasOverDraftProtection() == true)
@@ -130,20 +130,20 @@ why coders need to be able to use them to get the software *just right*.
 ====
 * Create 2 variables to use for a comparison 
 * Use at least two comparison operators in Python
-* And print them "console.log(2 > 1)"
+* And print them "print(2 > 1)"
 ====
 
 Here is an example:
 
 [source]
 ----
-let houseTemp = 67.0;
-let thermostatSetting = 70.0;
+houseTemp = 67.0;
+thermostatSetting = 70.0;
 
-console.log(houseTemp >= 55.0);
-console.log(houseTemp <= thermostatSetting);
-console.log(thermostatSetting != 72.0);
-console.log(houseTemp > 65.0 && thermostatSetting == 68.0)
+print(houseTemp >= 55.0);
+print(houseTemp <= thermostatSetting);
+print(thermostatSetting != 72.0);
+print(houseTemp > 65.0 && thermostatSetting == 68.0)
 ----
 
 These log statements should produce TRUE, TRUE, TRUE and FALSE.

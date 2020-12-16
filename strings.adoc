@@ -56,7 +56,7 @@ Computers often start numbering things like strings, lists, and arrays at 0, not
 
 [source]
 ----
-let name = "Wacka Flocka";
+name = "Wacka Flocka";
 ----
 
 Now we have a string variable named *name* and it's value is "Wacka Flocka".
@@ -69,9 +69,9 @@ We can use `.length` to find the length of a string
 
 [source]
 ----
-let str = "Wakanda Forever!";
-let answer = str.length;
-console.log(answer); // -> 16
+str = "Wakanda Forever!";
+answer = str.length;
+print(answer); # -> 16
 ----
 
 === Accessing Characters in a String
@@ -80,13 +80,13 @@ As mentioned before, we can reach into a string and copy out the stuff we find t
 
 [source]
 ----
-let word = "Hello";
-// Access the the first character (first by index, second by function)
-console.log(word[0]); // H
-console.log(word.charAt(0)); // H
-// the last character
-console.log(word[word.length - 1]); // o
-console.log(word.charAt(word.length - 1)); // o
+word = "Hello";
+# Access the the first character (first by index, second by function)
+print(word[0]); # H
+print(word.charAt(0)); # H
+# the last character
+print(word[word.length - 1]); # o
+print(word.charAt(word.length - 1)); # o
 ----
 
 When you see something like *word[0]*, it is pronounced like "word sub zero". If you have
@@ -94,27 +94,27 @@ When you see something like *word[0]*, it is pronounced like "word sub zero". If
 
 === String Concatenation (Joining strings)
 
-This simply means joining strings together using the + operator or the concat( ) method. Either one is commonly used. 
+This simply means joining strings together using the + operator or the concat( ) method-function. Either one is commonly used. 
 
 [source]
 ----
-let price = 20;
-let dollarSign = "$";
-let priceTag = dollarSign + price; // $20
+price = 20;
+dollarSign = "$";
+priceTag = dollarSign + price; # $20
 //or
-let priceTag = dollarSign.concat(price); // $20
-console.log(priceTag); // -> $20
+priceTag = dollarSign.concat(price); # $20
+print(priceTag); # -> $20
 ----
 
 Or perhaps a little more useful example:
 
 [source]
 ----
-let name = "Mikaila";
-let hoursWorked = 12;
+name = "Mikaila";
+hoursWorked = 12;
 
-let workReport = "Today, " + name + " worked a total of " + hoursWorked + " hours."
-console.log(workReport);
+workReport = "Today, " + name + " worked a total of " + hoursWorked + " hours."
+print(workReport);
 ----
 
 The output would be:
@@ -126,7 +126,7 @@ Today, Mikaila worked a total of 12 hours.
 === SubStrings
 
 Getting a substring is a common operation. This is how we extract the characters from a string, between two specified indices. (Which is why it's important to remember the indexes start at 0.)
-There are 3 methods in Python to get a substring: substring, substr and slice. Let's look
+There are 3 method-functions in Python to get a substring: substring, substr and slice. Let's look
 at each one. They have very slight differences, so you may want to pick one and memorize what your choice does.
 
 _someString.*substring*(start, end)_
@@ -140,35 +140,35 @@ Characters are extracted from a string between "start" and "end", not including 
 
 [source]
 ----
-let firstName = "Christopher";
+firstName = "Christopher";
 ----
 
-Now let's use the 3 substring methods on firstName and extract and print out "Chris"
+Now let's use the 3 substring method-functions on firstName and extract and print out "Chris"
 
 [source]
 ----
-let firstName = "Christopher";
-console.log(firstName.substring(0,5)); // "Chris"
+firstName = "Christopher";
+print(firstName.substring(0,5)); # "Chris"
 //or
-let a = firstName.slice(0,5); // "Chris"
-console.log(a);
+a = firstName.slice(0,5); # "Chris"
+print(a);
 //or
-let b = firstName.substr(0,5); // "Chris"
-console.log(b);
+b = firstName.substr(0,5); # "Chris"
+print(b);
 ----
 
 Yep. They all print "Chris". (Act impressed... thanks!) BUT, let's try to extract the string "stop" from the name.
 
 [source]
 ----
-let firstName = "Christopher";
-console.log(firstName.substring(4,8)); // "stop"
+firstName = "Christopher";
+print(firstName.substring(4,8)); # "stop"
 //or
-let a = firstName.slice(4,8); // "stop"
-console.log(a);
+a = firstName.slice(4,8); # "stop"
+print(a);
 //or
-let b = firstName.substr(4,4); // "stop"
-console.log(b);
+b = firstName.substr(4,4); # "stop"
+print(b);
 ----
 
 Notice how the arguments to the functions are *slightly* different. This is why it might be best to pick to memorize and use that one.
@@ -179,9 +179,9 @@ Let's try a little harder idea...
 ====
 [source]
 ----
-let fName = "Christopher";
+fName = "Christopher";
 ----
-- Your turn to use the substring/substr/slice method on firstName
+- Your turn to use the substring/substr/slice method-function on firstName
 - Extract and print out "STOP" from inside the string above
 - And make it uppercase! ("stop" to "STOP") footnote:[You could google how to do this, try "python string make upper case"]
 ====
@@ -190,32 +190,32 @@ Well?
 
 [source]
 ----
-let fName = "Christopher";
-console.log(fName.substring(4,8).toUpperCase());
+fName = "Christopher";
+print(fName.substring(4,8).toUpperCase());
 ----
 
-Want to bet there is also a "toLowerCase()" method as well?
+Want to bet there is also a "toLowerCase()" method-function as well?
 
-=== Summary of substring methods
+=== Summary of substring method-functions
 
 Take a look at these various ways to copy out a substring from the source string named 'rapper', which contains the string 'mikaila'. 
 
 [source]
 ----
-let rapper = "mikaila";
+rapper = "mikaila";
 
-console.log(rapper.substr(0,4));  // mika
-console.log(rapper.substr(1,3));  // ika
+print(rapper.substr(0,4));  # mika
+print(rapper.substr(1,3));  # ika
 
-console.log(rapper.substring(0,4));  // mika
-console.log(rapper.substring(1,4));  // ika
+print(rapper.substring(0,4));  # mika
+print(rapper.substring(1,4));  # ika
 
-console.log(rapper.slice(0,4)); // mika
-console.log(rapper.slice(1,4)); // ika
-console.log(rapper.slice(1,3)); // ik
+print(rapper.slice(0,4)); # mika
+print(rapper.slice(1,4)); # ika
+print(rapper.slice(1,3)); # ik
 ----
 
-We're using each of the three different substring methods to copy out some smaller piece of the 'rapper' string.
+We're using each of the three different substring method-functions to copy out some smaller piece of the 'rapper' string.
 
 === Reverse a String
 
@@ -227,9 +227,9 @@ To Reverse a String
 
 Step 1 - Use the split() to return an array of strings
 
-Step 2 - Use the reverse() method to reverse the newly created array of string characters
+Step 2 - Use the reverse() method-function to reverse the newly created array of string characters
 
-Step 3 - Use the join() method to join all elements into a String
+Step 3 - Use the join() method-function to join all elements into a String
 ====
 
 Solution
@@ -237,11 +237,11 @@ Solution
 [source]
 ----
 var str = "Christopher";
-var res = str.substring(4, 8).toUpperCase(); // -> "STOP"
-var spl = res.split("");  // -> ["S", "T", "O", "P"]
-var rev = spl.reverse();  // -> ["P", "O", "T", "S"]
-var result = rev.join("");  // -> "POTS"
-console.log(result); // -> POTS
+var res = str.substring(4, 8).toUpperCase(); # -> "STOP"
+var spl = res.split("");  # -> ["S", "T", "O", "P"]
+var rev = spl.reverse();  # -> ["P", "O", "T", "S"]
+var result = rev.join("");  # -> "POTS"
+print(result); # -> POTS
 ----
 
 Strings are perhaps the most important data type in almost any language. Being able to manipulate them easily and do powerful things with them in Python, makes you a better coder.

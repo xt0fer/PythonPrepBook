@@ -21,7 +21,7 @@ A property is a “key: value” pair, where key is a string (also called a “p
 
 [source]
 ----
-let katniss = {
+katniss = {
     firstname: "Katniss",
     lastname: "Everdene",
     homedistrict: 12,
@@ -38,7 +38,7 @@ Each pair (of key and value) can be referred to as a *property*. Properties can 
 
 [source]
 ----
-let player1 = {
+player1 = {
     name: "Rocco",
     species: "warrior",
     super_power: flight,
@@ -64,14 +64,14 @@ Values can be retrieved from inside an object by using a string expression in a 
 
 [source]
 ----
-player1[name] // "Rocco"
-player.name   // "Rocco"
-player1.lives // 4
+player1[name] # "Rocco"
+player.name   # "Rocco"
+player1.lives # 4
 ----
 
 You get 'undefined' if you try to retrieve a value whose key doesn't exist.
 
-player1.nickname  // undefined
+player1.nickname  # undefined
 
 === Property Update
 
@@ -81,9 +81,9 @@ If we were to use an assignment statement, we can change the properties inside o
 ----
 player1.name = "Gina";
 player1[species] = "Mage";
-player1.weapons.sword = "Anduril";  // notice how to reach into nested objects!
+player1.weapons.sword = "Anduril";  # notice how to reach into nested objects!
 
-console.log(player1.weapons.sword);  // Anduril
+print(player1.weapons.sword);  # Anduril
 ----
 
 === Object Reference
@@ -94,9 +94,9 @@ If we have an object:
 
 [source]
 ----
-let airplane512 = {
+airplane512 = {
     type: "airbusA330",
-    topSpeed: 0.86, // Mach
+    topSpeed: 0.86, # Mach
     passengerLimit: 253,
     passengersOnboard: 0
 }
@@ -106,18 +106,18 @@ We have built a plane object.
 
 [source]
 ----
-let flight77 = airplane512;  // I'm assigning a plane to a flight
+flight77 = airplane512;  # I'm assigning a plane to a flight
 
 flight77.destination = "Tokyo"; //create two new properties in the object
 flight77.origin = "Seattle";
 
-// now watch carefully...
+# now watch carefully...
 flight77.passengersOnboard = 120;
 
-// and if I print out some of the properties...
-console.log(airplane512.passengersOnboard);  // 120
-console.log(flight77.type); // airbusA330
-console.log(airplane512.type); // airbusA330
+# and if I print out some of the properties...
+print(airplane512.passengersOnboard);  # 120
+print(flight77.type); # airbusA330
+print(airplane512.type); # airbusA330
 ----
 
 This is because both flight77 and airplane512 _refer to the *same* object. so when you make changes through the flight77 name, the properties in the object change, and you can get and/or set properties through the airplane512 name as well. This proves very powerful in many cases.
@@ -141,7 +141,7 @@ As you may be aware, in American football there are four common changes to a tea
 
 [source]
 ----
-let scoreCounter = {
+scoreCounter = {
     options: {"fieldgoal": 3, "touchdown": 6, 
     "point_after_touchdown": 1, "safety": 2},
     
@@ -165,18 +165,18 @@ let scoreCounter = {
 }
 ----
 
-We can use that object, with its function methods like this:
+We can use that object, with its function method-functions like this:
 
 [source]
 ----
-scoreCounter.touchdown(); // add 6
-scoreCounter.pat(); // add 1
-scoreCounter.fieldgoal(); // add 3
+scoreCounter.touchdown(); # add 6
+scoreCounter.pat(); # add 1
+scoreCounter.fieldgoal(); # add 3
 
-console.log(scoreCounter.get_score()); // ??
+print(scoreCounter.get_score()); # ??
 ----
 
-There are two data properties (options and score), and 5(!) functions. These functions are called *methods* (functions which are attached to an object), and get invoked when you make the _method call_ (or _invoke_ the method on the _object_).
+There are two data properties (options and score), and 5(!) functions. These functions are called *method-functions* (functions which are attached to an object), and get invoked when you make the _method-function call_ (or _invoke_ the method-function on the _object_).
 
 Notice the *this* variable. _This_ is the special variable used to refer to the _object itself_. (which is a rather advanced topic for this book, so, we'll leave it right there. When you get a chance, read about _this_ in a deeper Python resource.)
 

@@ -1,9 +1,9 @@
 
 == Functions
 
-A function is a block of code designed to perform a particular task. A function encloses a set of statements and is a fundamental modular unit of Python. They let you reuse code, and provide a way for you to organize your programs, keeping them easier to understand and easier to modify. It's often said that the craft of programming is the creation of a set of functions and data structures which implement a solution to some problem or set of requirements.
+A function is a block of code designed to perform a particular task. A function encloses a set of statements and is a fundamental modular unit of Python. They you reuse code, and provide a way for you to organize your programs, keeping them easier to understand and easier to modify. It's often said that the craft of programming is the creation of a set of functions and data structures which implement a solution to some problem or set of requirements.
  
-Functions are objects, like many things in Python. They can be stored in variables, other objects, or even collected into arrays. Functions are very powerful because in Python, they can be passed as arguments to other functions, returned from functions, and can even have methods attached to them. The most important thing that functions can do is get *invoked*.
+Functions are objects, like many things in Python. They can be stored in variables, other objects, or even collected into arrays. Functions are very powerful because in Python, they can be passed as arguments to other functions, returned from functions, and can even have method-functions attached to them. The most important thing that functions can do is get *invoked*.
 
 You create functions easily.
 
@@ -13,7 +13,7 @@ Two examples of how you write a function literal:
 
 [source]
 ----
-let add = function (parameter1, parameter2) {
+add = function (parameter1, parameter2) {
     return parameter1 + parameter2; 
 }
 ----
@@ -32,12 +32,12 @@ In both of these cases, you end up with a function named 'add' that takes two pa
 [source]
 ----
 function greetUser(username) {
-    console.log( "Hello " + username);
+    print( "Hello " + username);
     return;
 }
 
 //calling/Invoking the function
-greetUser("Mike Jones"); // "Hello Mike Jones"
+greetUser("Mike Jones"); # "Hello Mike Jones"
 ----
 
 === Invoking Functions
@@ -64,7 +64,7 @@ function prepFlight(airplane) {
 }
 ----
 
-You can see how functions let you perform different things in a particular order, and while you might have no idea _how_ 'loadBaggage' does what it does, you can see how the program preps the airplane object for flight and makes sure everything important is done. Each of the functions from 'loadBaggage' to 'takeoff' is invoked and returns so the next one can be invoked. This is the power of functions - the ability to take some code and put it a function so that it much easier to understand.
+You can see how functions you perform different things in a particular order, and while you might have no idea _how_ 'loadBaggage' does what it does, you can see how the program preps the airplane object for flight and makes sure everything important is done. Each of the functions from 'loadBaggage' to 'takeoff' is invoked and returns so the next one can be invoked. This is the power of functions - the ability to take some code and put it a function so that it much easier to understand.
 
 === Anonymous Functions
 
@@ -73,12 +73,12 @@ A common pattern used in Python revolves around an *anonymous* function. It's a 
 [source]
 ----
 function () {
-    let x = 5;
-    let y = 4;
+    x = 5;
+    y = 4;
     while (x < 100) {
         x = x + y;
     }
-    console.log("x is", x);
+    print("x is", x);
 } () ;
 ----
 
@@ -88,10 +88,10 @@ You see this often in Python. It's a way to put some code into an argument to an
 
 [source]
 ----
-let milliSecInASecond = 1000;
+milliSecInASecond = 1000;
 
 setTimeout(function () {
-    console.log('We waited for 5 seconds, to print this')
+    print('We waited for 5 seconds, to print this')
 }, 5 * milliSecInASecond);
 ----
 
@@ -107,9 +107,9 @@ function greetUser(username) {
     return "Hello " + username;
 }
 
-let result = greetUser("Welcome back, Mike Jones");
+result = greetUser("Welcome back, Mike Jones");
 
-console.log(result); // will print "Hello Welcome back, Mike Jones" 
+print(result); # will print "Hello Welcome back, Mike Jones" 
 ----
 
 Or like this:
@@ -133,23 +133,23 @@ Again, to be clear, we might use this function like this:
 [source]
 ----
 
-let home = {
+home = {
     name = "Fightin Cats"
     score = 0;
 }
 
-let visitor = {
+visitor = {
     name = "Wild Horses"
     score = 0;
 }
 
-playGame(home, visitor); // a lot of work done in this function(!)
+playGame(home, visitor); # a lot of work done in this function(!)
 
-// game is done
-let result = determineWinner(home, visitor);
+# game is done
+result = determineWinner(home, visitor);
 
-// and then print the result..
-console.log(result);
+# and then print the result..
+print(result);
 ----
 
 === Function Parameters
@@ -175,7 +175,7 @@ function makeNegative(number) {
     if (number > 0) {
         return -(number);
     }
-    // already negative, it's less than 0
+    # already negative, it's less than 0
     return number;
 }
 ----
@@ -192,9 +192,9 @@ So to see if a number is even, we could use '(number % 2 == 0)':
 
 [source]
 ----
-console.log((8 % 2 === 0)); // true
-console.log((7 % 2 === 0)); // false
-console.log((4 % 2 === 0)); // true
+print((8 % 2 === 0)); # true
+print((7 % 2 === 0)); # false
+print((4 % 2 === 0)); # true
 ----
 And we can use the same technique to see if a number is evenly divisible by 3 or 5.
 
@@ -209,7 +209,7 @@ Try to write a function that will perform the following requirements:
 * If parameter is divisible by 3. Print Zip
 * If parameter is divisible by 5. Print Coder
 Phew...Finally
-* Call the method and pass in 45 as your parameter
+* Call the method-function and pass in 45 as your parameter
 ====
 
 OKAY! Write it yourself!
@@ -230,14 +230,14 @@ Well, here's one solution:
 
 [source]
 ----
-// Function ZipCoder
+# Function ZipCoder
 
 function zipCoder(aNumber) {
-if (aNumber % 15 == 0) console.log("ZipCoder");
-else if (aNumber % 3 == 0) console.log("Zip");
-else if (aNumber % 5 == 0) console.log("Coder");
+if (aNumber % 15 == 0) print("ZipCoder");
+else if (aNumber % 3 == 0) print("Zip");
+else if (aNumber % 5 == 0) print("Coder");
 }
 
-zipCoder(45); // -> ZipCoder
+zipCoder(45); # -> ZipCoder
 ----
 

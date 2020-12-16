@@ -2,7 +2,7 @@
 == Conditional Statements
 
 We have been seeing programs which consist of a list of statements, one after another, where the "flow of control" goes from one line to the next, top to bottom, and so on to the end of the list of lines.
-There are more useful ways of breaking up the "control flow" of a program. Python has several conditional statements that let the programmer do things based on conditions in the data. 
+There are more useful ways of breaking up the "control flow" of a program. Python has several conditional statements that the programmer do things based on conditions in the data. 
 
 === If statement
 
@@ -21,7 +21,7 @@ if (speed > speedLimit)
     driver.getsATicket();
 
 if (x <= -1) 
-    console.log("Cannot have negative numbers!");
+    print("Cannot have negative numbers!");
 
 if (account.balance >= amountRequested) {
     subtract(account, amountRequested);
@@ -35,7 +35,7 @@ Python also has an *else* part to the *if* statement. When the *if* condition is
 [source]
 ----
 if (account.balance >= amountRequested) {
-    // let customer have money
+    # customer have money
 } else {
     printReceipt("Sorry, you don't have enough money in your account!")
 }
@@ -45,16 +45,16 @@ Python can also "nest" if statements, making them very flexible for complicated 
 
 [source]
 ----
-let timeOfDay = "Afternoon";
+timeOfDay = "Afternoon";
 
 if (timeOfDay === "Morning") {
-    console.log("Time to eat breakfast");
+    print("Time to eat breakfast");
     eatCereal();
 } else if (timeOfDay === "Afternoon") {
-    console.log("Time to eat lunch");
+    print("Time to eat lunch");
     haveASandwich();
 } else {
-    console.log("Time to eat dinner");
+    print("Time to eat dinner");
     makeDinner();
     eatDinner();
     doDishes();
@@ -77,13 +77,13 @@ Finally, make sure to change the value of the age variable in the repl, to outpu
 
 [source]
 ----
-let userAge = 17;
+userAge = 17;
 if (userAge < 18) {
-    console.log("Cannot party with us");
+    print("Cannot party with us");
 } else if (userAge >= 18) {
-    console.log("Party over here");
+    print("Party over here");
 } else {
-    console.log("I do not recognize your age");
+    print("I do not recognize your age");
 }
 ----
 

@@ -20,18 +20,18 @@ Say we needed to multiply two numbers. Maybe 2 times 3. Now we could easily writ
 that printed that result.
 
 ----
-console.log(2 * 3); 
+print(2 * 3); 
 ----
 And that will print 6 on the console. But maybe we'd like to make it a little more
 complete.
 
 [source, js]
 ----
-let a = 2; 
-let b = 3;
-// Multiply a times b
-let answer = a * b;
-console.log(answer); // -> 6
+a = 2; 
+b = 3;
+# Multiply a times b
+answer = a * b;
+print(answer); # -> 6
 ----
 
 Using this as a model, how would you write programs to solve these problems?
@@ -45,17 +45,17 @@ Using this as a model, how would you write programs to solve these problems?
 
 [source, python]
 ----
-let a = 9; 
-let b = 3;
+a = 9; 
+b = 3;
 
-let L1 = b - a;
-let L2 = a / b;
-let L3 = a + 1;
+L1 = b - a;
+L2 = a / b;
+L3 = a + 1;
 //or using increment
 L3 = a++;
-console.log(L1); // -> -6
-console.log(L2); // -> 3
-console.log(L3); // -> 10
+print(L1); # -> -6
+print(L2); # -> 3
+print(L3); # -> 10
 ----
 
 === Division and Remainder
@@ -64,10 +64,10 @@ We know that we can do regular division. If have a simple program like this, we 
 what to expect:
 
 ----
-let a = 6 / 3; // -> 2
-let a = 12 / 3; // -> 4
-let a = 15 / 3; // -> 5
-let a = 10 / 4; // -> 2.5
+a = 6 / 3; # -> 2
+a = 12 / 3; # -> 4
+a = 15 / 3; # -> 5
+a = 10 / 4; # -> 2.5
 ----
 
 But sometimes, we have a need to know what the remainder of a division is.
@@ -75,27 +75,27 @@ The remainder operator %, despite its appearance, is not related to percents.
 
 The result of a % b is the remainder of the integer division of a by b.
 ----
-console.log( 5 % 2 ); // 1, a remainder of 5 divided by 2
-console.log( 8 % 3 ); // 2, a remainder of 8 divided by 3
+print( 5 % 2 ); # 1, a remainder of 5 divided by 2
+print( 8 % 3 ); # 2, a remainder of 8 divided by 3
 ----
 Now what's this about '%' (the remainder) operator?
 
 [source, js]
 ----
-let a = 3; 
-let b = 2;
-// Modulus (Remainder)
-let answer = a % b;
-console.log(answer); // -> 1
+a = 3; 
+b = 2;
+# Modulus (Remainder)
+answer = a % b;
+print(answer); # -> 1
 ----
 
 [source, js]
 ----
-let a = 19; 
-let b = 4;
-// Remainder
-let answer = a % b;
-console.log(answer); // -> 3
+a = 19; 
+b = 4;
+# Remainder
+answer = a % b;
+print(answer); # -> 3
 ----
 
 === Order is Important
@@ -158,8 +158,8 @@ This is because the multiplication is _higher priority_ than the addition, _even
 
 [source, js]
 ----
-let result = 30 + 6 * 2;
-console.log(result);
+result = 30 + 6 * 2;
+print(result);
 ----
 
 This gives us 42. 
@@ -175,8 +175,8 @@ What happens now?
 
 [source, js]
 ----
-let result = (30 + 6) * 2;
-console.log(result);
+result = (30 + 6) * 2;
+print(result);
 ----
 
 What's going to happen? Will the answer be 42 or 72?
@@ -187,12 +187,12 @@ There is a useful thing in Python called the Math object which allows you to per
 
 
 * Math.PI; - returns 3.141592653589793
-* Math.round(4.7);    // returns 5
-* Math.round(4.4);    // returns 4
+* Math.round(4.7);    # returns 5
+* Math.round(4.4);    # returns 4
 * Math.pow(x, y) - the value of x to the power of y - x^y^
-* Math.pow(8, 2);      // returns 64
+* Math.pow(8, 2);      # returns 64
 * Math.sqrt(x) - returns the square root of x
-* Math.sqrt(64);      // returns 8
+* Math.sqrt(64);      # returns 8
 
 [IMPORTANT]
 ====
@@ -202,8 +202,8 @@ When we ask a 'function' like sqrt to do some work for us, we have to code somet
 
 [source]
 ----
-let squareRootTwo = Math.sqrt(2.0);
-console.log(squareRootTwo);
+squareRootTwo = Math.sqrt(2.0);
+print(squareRootTwo);
 ----
 
 We will get "1.4142135623730951" in the output. That number (squareRootTwo) 
@@ -218,8 +218,8 @@ Say we need to compute "6^2^ + 5"
 
 [source]
 ----
-let result = Math.pow(6,2) + 5;
-console.log(result);
+result = Math.pow(6,2) + 5;
+print(result);
 ----
 
 What will the answer be? 279936 or 41?

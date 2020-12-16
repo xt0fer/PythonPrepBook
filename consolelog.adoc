@@ -1,28 +1,28 @@
 
-== Output console.log()
+== Output print()
 
 Let's start with a really simple program.
 Perhaps the simplest Python program is:
 
 [source]
 ----
-console.log("Hello, World!");
+print("Hello, World!");
 ----
 
-This program just prints "Hello, World!". footnote:[And while you might _not yet_ understand this _technical description_, it is a program of one _line_ of code, which says "call the 'log' method on the 'console' object, using the string "Hello, World!" as the argument to be logged."]
+This program just prints "Hello, World!". footnote:[And while you might _not yet_ understand this _technical description_, it is a program of one _line_ of code, which says "call the 'print' function using the string "Hello, World!" as the argument to be sent to output."]
 
-Logging, in this case, means _outputting_ or _printing_ the "Hello, World!" somewhere. That somewhere is the _console_, a place Python uses to communicate with a user (in this case, us, the programmers.)
+Printing goes to "standard output", a place Python uses to communicate with a user (in this case, us, the programmers.)
 
 (And if you haven't done it yet, go to https://code.zipcode.rocks and make a browser bookmark for yourself. Once that's done, you can use that REPL footnote:[a REPL is short for "read-evaluate-print loop", a special kind of computer program that lets you run code of a given language.] as a place where you can type in the code from this book and run it to see what each code snippet does.)
 
-We will use `console.log` to do a lot in the coming pages. It's a simple statement, one that in other languages might be `print` or `write` or `puts` (and why we all cannot just agree on one way to do this, well, beats me. Python's is `console.log`)
+We will use `print` to do a lot in the coming pages.
 
 Here's your second Python program: 
 
 [source]
 ----
-let milesPerHour = 55.0;
-console.log("Car's Speed: ", milesPerHour);
+milesPerHour = 55.0
+print("Car's Speed: ", milesPerHour)
 ----
 
 If you typed into your REPL and clicked the "Run" button, you should have seen this as your output:
@@ -39,35 +39,36 @@ Cool, huh? The ability to communicate with you is one of Python's most fundament
 
 While you're not thinking about the long term, or about large Python programs, there is a powerful thing in Python that helps with tracking comments and notes about the code.
 
-In your program, you can write stuff that Python will ignore, it's just there for you (or readers of your code). We use two slashes to start a comment, and the comment goes to the end of the line.
-Javascript will ignore anything on a line after two forward slashes. "//"
+In your program, you can write stuff that Python will ignore, it's just there for you (or readers of your code). 
+We use a 'hash character' to start a comment, and the comment goes to the end of the line.
+Javascript will ignore anything on a line after a hash character. "#"
 
 [source]
 ----
-// this is a comment. it might describe something in the code.
-console.log('Hello');
+# this is a comment. it might describe something in the code.
+print('Hello')
 
-console.log('World'); // this is also a comment.
+print('World') # this is also a comment.
 ----
 
 Often, you'll see something like this in this book.
 
 [source]
 ----
-let flourAmount = 3.5;
+flourAmount = 3.5;
 
-console.log(flourAmount); // -> 3.5
+print(flourAmount); # -> 3.5
 ----
 
-That comment at the end of the console.log line is showing what you can expect to see in the output. Here it would be "3.5" printed by itself. Try it in your bookmarked Repl.
+That comment at the end of the print line is showing what you can expect to see in the output. Here it would be "3.5" printed by itself. Try it in your bookmarked Repl.
 
 We can also add useful stuff to the .log call. 
 
 [source]
 ----
-let flourAmount = 3.5;
+flourAmount = 3.5;
 
-console.log("We need", flourAmount, "cups of flour."); // -> We need 3.5 cups of flour.
+print("We need", flourAmount, "cups of flour."); # -> We need 3.5 cups of flour.
 ----
 
 See how Python types it all out as a useful phrase? That proves to be very handy in a million-plus (or more) cases.
@@ -99,18 +100,18 @@ Each of these lines is something we'd like Python to *compute* for us. That comp
 
 === Statements
 
-A *statement* is just a line of Python. It ends with a ';' (semi-colon).
+A *statement* is just a line of Python.
 
 [source]
 ----
-// at the Grocery
+# at the Grocery
 
-salesTaxRate = 0.06;
+salesTaxRate = 0.06
 
-totalGroceries = 38.99;
-salesTax = totalGroceries * salesTaxRate;
+totalGroceries = 38.99
+salesTax = totalGroceries * salesTaxRate
 
-chargeToCard = totalGroceries + salesTax;
+chargeToCard = totalGroceries + salesTax
 ----
 And this is what a Python program looks like. It's just a list of statements, one after the other, that get computed from the top down.
 
@@ -120,31 +121,36 @@ We'll go thru each of these kinds of things slowly in sections ahead.
 
 === Multi-line Statements
 
-In this book, you may see that the code used in examples is longer than can fit on one line in the code boxes. Well, Python doesn't care. That's why it has *semi-colons* ';' at the end of the statements. So to be clear, a statement with long variable names is the same as one with a short name.
+In this book, you may see that the code used in examples is longer than can fit on one line in the code boxes. In Python, we have to add a line "continuation" character. So to be clear, a statement with long variable names is the same as one with a short name, but you may have to add "\" (backslashes) to make Python happy.
 
 [source]
 ----
-k = h * kph - (rest / 60);
+k = h * kph - (rest / 60)
 
-kilometersCycled = numberOfHoursPedalled * kilometersPerHour - (totalMinutesOfRest / 60);
+kilometersCycled = numberOfHoursPedalled \
+    * kilometersPerHour \
+    - (totalMinutesOfRest / 60)
 ----
 
-When you come across code that goes onto multiple lines, do like Python does, read until you find the ';'. It's like a period in an English sentence.
+When you come across code that goes onto multiple lines, do like Python does, look for the backslash, when you find it, think of the line being spread out.
 
 === Block Statement
 
-Very often in Python, we will see a *block* of statements. It is a list of statements inside of a pair of curly-braces "{ }". It acts like a container to make clear what statements are included in the block.
+Very often in Python, we will see a *block* of statements. It is a list of statements _indented_ the same amount. (Yes, unlike many languages, in Python, _white space is important_.) It acts like a container to make clear what statements are included in the block.
 
 [source]
 ----
-if (magePower > 120.0) {
-    maxMagic = 500.0;
-    lifeSpan = 800.0;
-    maxWeapons = magePower / maxPowerPerWeapon;
-}
+if (magePower > 120.0):
+    maxMagic = 500.0
+    lifeSpan = 800.0
+    maxWeapons = magePower / maxPowerPerWeapon
 
-// some more code
+# some more code
+print(magePower, "is your Mage's Power rating.")
 ----
 
-See those curly-braces? They start and stop the _block_, and contain the statements within. You can also see how the code is indented, but the real key are those braces. You'll see lots of blocks when you're looking at Python code.
+See those SPACES (and confusingly, they might be TABs but you cannot tell that by looking at the line). 
+All the indented lines below the IF statement are part of what gets run when the IF is True.
+
+Indentation is rejected as inconsistent if the code mixes tabs and spaces it gets flagged as an error in the code; a TabError is raised in that case.
 

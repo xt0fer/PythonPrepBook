@@ -54,7 +54,7 @@ You may be aware that Zip Code has a _data engineering_ course that teaches Pyth
 
 === Python: Easy to Understand
 
-Python is an easy programming language to learn, and we're going to use it in this book to describe the basic fundamentals of coding. Its form is modern and it is widely used. It can be used for many purposes, from web applications, machine learning, data science to back-end server processing. We're going to use it for learning simple, programming-in-the-small, methods and concepts; but make no mistake - Python is world-class language capable of amazing things.
+Python is an easy programming language to learn, and we're going to use it in this book to describe the basic fundamentals of coding. Its form is modern and it is widely used. It can be used for many purposes, from web applications, machine learning, data science to back-end server processing. We're going to use it for learning simple, programming-in-the-small, method-functions and concepts; but make no mistake - Python is world-class language capable of amazing things.
 
 ==== Simple to Use
 
@@ -148,7 +148,7 @@ include::patterns.adoc[]
 include::functions.adoc[]
 include::return.adoc[]
 include::modules.adoc[]
-include::objectsmethods.adoc[]
+include::objectsmethod-functions.adoc[]
 include::appendixa.adoc[]
 include::appendixb.adoc[]
 

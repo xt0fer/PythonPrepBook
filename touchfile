@@ -14,4 +14,4 @@ touch break.adoc
 touch functions.adoc
 touch return.adoc
 touch modules.adoc
-touch objectsmethods.adoc
+touch objectsmethod-functions.adoc
