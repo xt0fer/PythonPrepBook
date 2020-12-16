@@ -10,9 +10,8 @@ Think of them as little boxes you can put data into, to keep it there and not lo
 There are some rules about variables. 
 
 - All Variables must be named.
-- Names can contain letters, digits, underscores, and dollar signs
+- Names can contain letters, digits, and underscores
 - Names must begin with a letter
-- Names can also begin with $ and _ but are often used in special cases
 - Names are case sensitive (y and Y are different variables)
 - Reserved words (like Python keywords) cannot be used as names
 - All variable names must be unique (no two alike)
@@ -28,7 +27,7 @@ Width
 currentScore
 playerOne
 playerTwo
-$sumOfCredits
+sumOfCredits
 _lastPlay
 isPlayerAlive
 ----
@@ -48,58 +47,46 @@ So be careful with UPPERCASE and lowercase letters in variable names.
 
 ==== Declaring a Variable
 
-[source]
-----
-x;
-----
-This creates a variable *x* that can hold any primitive type. But it has NO value assigned to it, so if we...
+We can declare a variable named 'cats' and assign it the value 3:
 
 [source]
 ----
-print(x);  # -> undefined
-----
-There is _nothing_ there. 
-
-If we were to declare a variable named 'cats' and assign it the value 3:
-
-[source]
-----
-cats = 3;
-print(cats);  # -> 3
+cats = 3
+print(cats)  # -> 3
 ----
 
 ==== Assign a value to a variable
 
 [source]
 ----
-age = 19; 
-name = "James";
-print(name, "is", age, "years old"); # -> James is 19 years old
-age = 21;
-name = "Gina";
-print(name, "is", age, "years old"); # -> Gina is 21 years old
+age = 19
+name = "James"
+print(name, "is", age, "years old") # -> James is 19 years old
+age = 21
+name = "Gina"
+print(name, "is", age, "years old") # -> Gina is 21 years old
 ----
 
 ==== Reassigning a value to a variable
 
 [source]
 ----
-x = "five";
-print(x); # -> five
-x = "nineteen";
-print(x); # -> nineteen
+x = "five"
+print(x) # -> five
+x = "nineteen"
+print(x) # -> nineteen
 ----
 
-Notice how we don't use "let" again, when we assign "nineteen" to x. We can assign a variable as many times as
+Notice how we assign "nineteen" to x. We can assign (re-assign) to a variable as many times as
 we might need to.
 
 [source]
 ----
-age = 3;
+age = 3
 # have a birthday
-age = age + 1;
+age = age + 1
 # have another birthday
-age = age + 1;
+age = age + 1
 print(age); # -> 5
 ----
 
@@ -111,11 +98,11 @@ In Python, variables are dynamic (can contain any data) which means a variable c
 
 [source]
 ----
-height = 62.0; # inches maybe?
-print(height); # -> 62
+height = 62.0 # inches maybe?
+print(height) # -> 62
 
-height = "very tall";
-print(height); # -> very tall
+height = "very tall"
+print(height) # -> very tall
 # yep, first height is a number
 # and then it's a string.
 ----
@@ -124,31 +111,36 @@ _You can't see it, but I am slowly shaking my head in disbelief. Some day, maybe
 
 === Constants
 
-Constants are like variables but they contain values that do NOT change such as a person’s date of birth. Convention is to capitalize constant variable names.
+Constants are like variables but they contain values that SHOULD NOT change such as a person’s date of birth. Convention is to capitalize constant variable names.
 
 [source]
 ----
-const DATE_OF_BIRTH = "04-02-2005";
-DATE_OF_BIRTH = "04-10-2005"; # <-error
+DATE_OF_BIRTH = "04-02-2005"
+PI = 3.14
+GRAVITY = 9.8
 ----
-An attempt to re-assign a value to a constant will fail.
+They are _usually_ declared in a file named 'constants.py'.
+
+Note: In reality, we don't use constants in Python. 
+(The language _doesn't_ have them.) 
+Naming them in all capital letters is a convention to separate them from variables, however, it does not actually prevent reassignment. 
+So be careful.
 
 
 === Data Types
 
 Python can keep track of a number of different kinds of data, and these are known
-as "primitive data types". There are 5 of them.
+as "data types". Here are a few of them.
 
-* *Number* - there are two kinds of numbers: integers and floats
+* *Numeric* - there are two kinds of numbers: integers, floats and complex
 ** *Integers* are like 0, -4, 5, 6, 1234
 ** *Floats* are numbers where the decimals matter like  0.005, 1.7, 3.14159, -1600300.4329
-* *String* - an array of characters - 
+** *Complex* are, well, if you don't already know, let's ignore them.
+* *str* - a _string_ of characters - 
 ** like 'text' or "Hello, World!"
-* *Boolean* - is either *true* or *false*
-** often used to decide things like isPlayer(1).alive() [true or false?]
-* *Null* - no value at all
-* *Undefined* - a variable not yet assigned - "x;"
-** this is a weird type, and not very common.
+* *Boolean* - is either *True* or *False*
+** often used to decide things like isPlayer(1).alive() [True or False?]
+* *None* - no value at all (nil or null in other languages)
 
 It is common for a computer language to want to know if data is a bunch numbers or text. Tracking
 what _type_ a piece of data is is very important. And it is the programmer's job to make sure all the 
@@ -163,8 +155,7 @@ Create variables for each primitive data type:
 - boolean, 
 - float, 
 - integer, 
-- string 
-- constant (integer)
+- str 
 
 Store a value in each.
 ====
@@ -174,20 +165,16 @@ Store a value in each.
 # Here are some samples. 
 
 # integer
-x = 0;
+x = 0
 
 # boolean
-playerOneAlive = true;
+playerOneAlive = True
 
 # float
-currentSpeed = 55.0;
+currentSpeed = 55.0
 
 # string
-playerOneName = "Rocco";
-
-# constant integer
-
-const maxPainScore = 150000;
+playerOneName = 'Rocco'
 ----
 
 Now, you try it. Write down a variable name and assign

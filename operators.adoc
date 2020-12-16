@@ -12,26 +12,24 @@ Python can do math. And many early programming problems you will come across dea
 |* |Multiplication |Multiply 2 values
 |/ |Division |Divide 2 numbers
 |% |Modulus |returns the remainder
-|++ |Increment |Increase value by 1
-|- - |Decrement |Decrease value by 1
 |===
 
 Say we needed to multiply two numbers. Maybe 2 times 3. Now we could easily write a program
 that printed that result.
 
 ----
-print(2 * 3); 
+print(2 * 3)
 ----
 And that will print 6 on the console. But maybe we'd like to make it a little more
 complete.
 
 [source, js]
 ----
-a = 2; 
-b = 3;
+a = 2
+b = 3
 # Multiply a times b
-answer = a * b;
-print(answer); # -> 6
+answer = a * b
+print(answer) # -> 6
 ----
 
 Using this as a model, how would you write programs to solve these problems?
@@ -45,17 +43,15 @@ Using this as a model, how would you write programs to solve these problems?
 
 [source, python]
 ----
-a = 9; 
-b = 3;
+a = 9
+b = 3
 
-L1 = b - a;
-L2 = a / b;
-L3 = a + 1;
-//or using increment
-L3 = a++;
-print(L1); # -> -6
-print(L2); # -> 3
-print(L3); # -> 10
+L1 = b - a
+L2 = a / b
+L3 = a + 1
+print(L1) # -> -6
+print(L2) # -> 3
+print(L3) # -> 10
 ----
 
 === Division and Remainder
@@ -64,10 +60,10 @@ We know that we can do regular division. If have a simple program like this, we 
 what to expect:
 
 ----
-a = 6 / 3; # -> 2
-a = 12 / 3; # -> 4
-a = 15 / 3; # -> 5
-a = 10 / 4; # -> 2.5
+a = 6 / 3 # -> 2
+a = 12 / 3 # -> 4
+a = 15 / 3 # -> 5
+a = 10 / 4 # -> 2.5
 ----
 
 But sometimes, we have a need to know what the remainder of a division is.
@@ -75,27 +71,27 @@ The remainder operator %, despite its appearance, is not related to percents.
 
 The result of a % b is the remainder of the integer division of a by b.
 ----
-print( 5 % 2 ); # 1, a remainder of 5 divided by 2
-print( 8 % 3 ); # 2, a remainder of 8 divided by 3
+print( 5 % 2 ) # 1, a remainder of 5 divided by 2
+print( 8 % 3 ) # 2, a remainder of 8 divided by 3
 ----
 Now what's this about '%' (the remainder) operator?
 
 [source, js]
 ----
-a = 3; 
-b = 2;
+a = 3 
+b = 2
 # Modulus (Remainder)
-answer = a % b;
-print(answer); # -> 1
+answer = a % b
+print(answer) # -> 1
 ----
 
 [source, js]
 ----
-a = 19; 
-b = 4;
+a = 19
+b = 4
 # Remainder
-answer = a % b;
-print(answer); # -> 3
+answer = a % b
+print(answer) # -> 3
 ----
 
 === Order is Important
@@ -158,8 +154,8 @@ This is because the multiplication is _higher priority_ than the addition, _even
 
 [source, js]
 ----
-result = 30 + 6 * 2;
-print(result);
+result = 30 + 6 * 2
+print(result)
 ----
 
 This gives us 42. 
@@ -175,24 +171,32 @@ What happens now?
 
 [source, js]
 ----
-result = (30 + 6) * 2;
-print(result);
+result = (30 + 6) * 2
+print(result)
 ----
 
 What's going to happen? Will the answer be 42 or 72?
 
-=== Python Math Object
+=== Python math Object
 
-There is a useful thing in Python called the Math object which allows you to perform mathematical tasks on numbers.
+There is a useful thing in Python called the `math` object which allows you to perform mathematical tasks on numbers.
 
+To make these work, you need to `import` the `math` module.
 
-* Math.PI; - returns 3.141592653589793
-* Math.round(4.7);    # returns 5
-* Math.round(4.4);    # returns 4
-* Math.pow(x, y) - the value of x to the power of y - x^y^
-* Math.pow(8, 2);      # returns 64
-* Math.sqrt(x) - returns the square root of x
-* Math.sqrt(64);      # returns 8
+[source]
+----
+import math
+
+math.pi # returns 3.141592653589793
+math.ceil(4.7)    # returns 5
+math.floor(4.4)    # returns 4
+x = 5
+y = 3
+math.pow(x, y) # the value of x to the power of y - x^y^
+math.pow(8, 2)      # returns 64.0
+math.sqrt(x) # returns the square root of x - 2.2360...
+math.sqrt(64)      # returns 8
+----
 
 [IMPORTANT]
 ====
@@ -202,8 +206,8 @@ When we ask a 'function' like sqrt to do some work for us, we have to code somet
 
 [source]
 ----
-squareRootTwo = Math.sqrt(2.0);
-print(squareRootTwo);
+squareRootTwo = math.sqrt(2.0)
+print(squareRootTwo)
 ----
 
 We will get "1.4142135623730951" in the output. That number (squareRootTwo) 
@@ -212,14 +216,14 @@ the result of the function and _what the function sqrt "returns"'_.
 
 ====
 
-*Math.pow() Example*
+*math.pow() Example*
 
 Say we need to compute "6^2^ + 5"
 
 [source]
 ----
-result = Math.pow(6,2) + 5;
-print(result);
+result = math.pow(6,2) + 5
+print(result)
 ----
 
 What will the answer be? 279936 or 41?
