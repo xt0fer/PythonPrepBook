@@ -5,39 +5,54 @@ Any experienced coder would say that the ability to see patterns in code, rememb
 The following samples are really simple techniques, but they show some common ways of doing things that you should think about and study. 
 In almost all these examples, there may be some missing variable declarations.
 Just roll with it. 
-If you think about it, I'm sure you can figure out what "let" variable declarations are needed to run the sample in the REPL page.
+If you think about it, I'm sure you can figure out what variables are needed to run the sample in the REPL page.
 
 === Simple Patterns
 
-If you wanted to find the larger of two values, x and y and assign it to 'max':
+If you wanted to find the larger of two values, x and y, and assign it to 'max':
 
 [source]
 ----
-if (x > y) {
-    max = x;
-} else {
-    max = y;
-}
+if (x > y):
+    max = x
+else:
+    max = y
 ----
 
 Related to it, if we have two variables x and y, and we want the smaller in x, and the larger in y.
 
 [source]
 ----
-if (x > y) {
-    t = x;
-    x = y;
-    y = t;
-}
+if (x > y):
+    t = x
+    x = y
+    y = t
+
 ----
 
 Do you see the three statements in the block there? That's called a 'swap'. If you need to swap two values in two variables, you just create a quick temporary variable 't' and use it as a place to make a copy of the first variable's value.
+
+But let me show you a *really cool* trick in Python. It's related to a data type we haven't talked about yet, call a *tuple* (which I pronounce "two-pell").
+
+I can in python do things like this:
+
+[source]
+----
+x, y = 5, 7
+# yes that assigns 5 to x and 7 to y!
+
+# I can also, and this is the cool part,
+
+y, x = x, y
+# which does the swap of the values *without a temporary 't' variable*.
+----
 
 If I needed to make sure a number is always positive (greater than zero), it's easy - this is called taking the "absolute value" of a number.
 
 [source]
 ----
-if (n < 0) n = -n;
+if (n < 0):
+    n = -n
 ----
 
 === Loop Patterns
@@ -49,12 +64,12 @@ Turns out there is a very easy pattern to learn here.
 
 [source]
 ----
-sum = 0;
-n = 100;
-for (i = 1; i < n; i++) {
-    sum = sum + i;
-}
-print(sum);
+sum = 0
+n = 100
+for i in range(0, n+1):
+    sum = sum + i
+
+print(sum)  # 5050
 ----
 
 Now, if you wanted to find the average of a bunch of numbers, that's as easy as taking the sum of the numbers and dividing the sum by the number of numbers (or n).
@@ -62,81 +77,82 @@ Now, if you wanted to find the average of a bunch of numbers, that's as easy as 
 
 [source]
 ----
-sum = 0;
-n = 100;
-for (i = 1; i < n; i++) {
-    sum = sum + i;
-}
-average = sum / n;
-print(average);
+sum = 0
+n = 100
+for i in range(0, n+1):
+    sum = sum + i
+
+average = sum / n
+print(average)  # 50.5
 ----
 
 Pretty easy, yes? And the other common pattern here is doing a *product* of all the numbers from 1 to n. (Let's try 20)
 
 [source]
 ----
-product = 1;
-n = 20;
-for (i = 1; i < n; i++) {
+product = 1
+n = 20
+for i in range(1, n+1):
     product = product * i;
-}
-print(product);
+
+print(product) # Whoa! -> 2432902008176640000
 ----
 
 Perhaps you want to print a table of values of some equation.
 
 [source]
 ----
-for (i = 0; i <= n; i++) {
-    print(i + " " + i*i/2);
-}
+n = 20
+for i in range(1, n):
+    print(str(i) + " " + str(i*i/2))
+
 ----
 
-=== Array Patterns
+=== List Patterns
 
-Arrays are often something that confuses beginning coders. Let's look at some code patterns with arrays that you see how arrays and loops can work together to get a lot of work pretty easily.
+Lists are often something that confuses beginning coders. Let's look at some code patterns with lists that you see how lists and loops can work together to get a lot of work pretty easily.
 
-The array we are going to use in all these cases is pretty simple. It's an array of 7 numbers.
+The list we are going to use in all these cases is pretty simple. It's a list of 7 numbers.
 
 [source]
 ----
-a = [ 4, 3, 7, 0, -4, 1, 8];
+a = [ 4, 3, 7, 0, -4, 1, 8]
 ----
 
-Here how to print out the array, one value per line.
-
-[source]
-----
-for (i = 0; i < a.length; i++) {
-    print(i, a[i]); # print the index and value of an array element.
-}
-----
-
-If we needed to find the *smallest* number in the array, we could do:
+Here how to print out the list, one value per line.
 
 [source]
 ----
-min = a[0];
-for (i = 1; i < a.length; i++) {
-    if (a[i] < min) min = a[i];
-}
-print(min);
+for i in a:
+    print(i) # each element in the list
+----
+
+If we needed to find the *smallest* number in the list, we could do:
+
+[source]
+----
+min = a[0]
+for i in a:
+    if (i < min):
+        min = i
+
+print(min)
 ----
 
 We should look carefully here. 
 First, notice how I have taken the first element a[0] and made my first 'min' that value. 
-Then, I started at 1 (not 0), to be my first compare. 
-Then we step through the array, looking at each value and if the new value is smaller than the previous one, we update it; otherwise, we just do the next value. footnote:[YES, if the array is only one element long, this will fail. But I'm merely trying to show some concepts here. I'd do this differently, if it were to be in some codebase somewhere.]
+Then we step through the list, looking at each value and if the new value is smaller than the previous one, we update it; otherwise, we just do the next value. 
 
-NOW, if you wanted to find the *largest* value in the array, you really only have to change a couple things.
+NOW, if you wanted to find the *largest* value in the list, you really only have to change a couple things.
 
 [source]
 ----
-max = a[0];
-for (i = 1; i < a.length; i++) {
-    if (a[i] > max) max = a[i];
-}
-print(max);
+max = a[0]
+for i in a:
+    if (i > max):
+        max = i
+
+print(max)
 ----
 
 Carefully look at the code, comparing to the one above. 
@@ -145,44 +161,46 @@ Well, for one, we changed the variable from 'min' to 'max'.
 (But did we need to do that? We could have left it max, but it's cleaner to make the change so people who read it aren't confused.)
 We also changed the comparison in the 'if' statement from "less than <" to "greater than >" which lets us decide if the new number is larger than the previous largest we found.
 
-In both of these cases, we start with an initial value, then we step through the array, look at each value comparing it to the smallest (or largest) value we have yet found. If we need to update the 'carrying variable', we do; otherwise, we just ignore the value.
+In both of these cases, we start with an initial value, then we step through the list, look at each value comparing it to the smallest (or largest) value we have yet found. If we need to update the 'carrying variable', we do; otherwise, we just ignore the value.
 
-What about finding the average of the values in the array? Well, we do it a lot like the average of the series of numbers.
-
-[source]
-----
-sum = 0;
-for (i = 0; i < a.length; i++) {
-    sum = sum + i;
-}
-average = sum / a.length ; # whoa! lookee there?
-
-print(average);
-----
-
-Yep, the "a.length" is very handy, it has exactly the count of the numbers in the array!
-
-Finally, if we wanted to reverse the values in the array, we could write some code:
+What about finding the average of the values in the list? Well, we do it a lot like the average of the series of numbers.
 
 [source]
 ----
-print("before:", a);
-n = a.length;
-half = Math.ceil(n / 2);
-for (i = 0; i < half; i++) {
-    t = a[i];
-    a[i] = a[n-1-i];
-    a[n-i-1] = t;
-}
-print("after: ",a);
+sum = 0
+for i in a:
+    sum += i # this is the same as `sum = sum + i`
+
+average = sum / len(a)  # whoa! lookee there?
+
+print(average)
 ----
 
-But perhaps the easier way to reverse an array in Javascript is to just call the library function:
+Yep, the "len(a)" is very handy, it has exactly the count of the numbers in the list!
+
+Finally, if we wanted to reverse the values in the list, we could write some code:
 
 [source]
 ----
-a = a.reverse();
-print(a);
+import math
+
+print("before:", a)
+n = len(a)
+half = math.ceil(n / 2)
+for i in range(0,half):
+    t = a[i]
+    a[i] = a[n-1-i]
+    a[n-i-1] = t
+
+print("after: ",a)
+----
+
+But perhaps the easier way to reverse an list in Python is to just call the library function:
+
+[source]
+----
+a.reverse()
+print(a)
 ----
 
 It can be useful to look at the "longer" way to continue to get a feel for how to do small, useful things with simple logic.
