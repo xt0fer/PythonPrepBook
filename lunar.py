@@ -1,17 +1,3 @@
-
-[appendix]
-== Lunar Lander
-
-This is some code to show you how you might write a simple lunar lander simulation in Python. It's taken from history, way back in the 1970's - this idea was passed around as some of the very first open source.
-
-Meant as an example of a longer program (159 lines) to get you thinking, it's really not very complicated. 
-The general idea is you have a series of "burns" in a list, and the game (or simulator, if you will) steps through the list applying each burn. 
-If you run out of altitude (or height) while you're going too fast, you will crash.
-
-The tricky bit would be for you to figure out what `burnArray` would be used to safely land at a vehicle speed 1 or 2. That could be hard.
-
-[source]
-----
 # Lunar Lander Source Code.
 import math
 import random
@@ -171,5 +157,3 @@ def runGame(burns):
 burnArray = [100, 100, 200, 200, 100, 100, 0, 0, 200, 100, 100, 0, 0, 0, 0]
 
 runGame(burnArray)
-
-----
