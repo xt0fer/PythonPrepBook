@@ -2,87 +2,102 @@
 
 The *for* loop is more complex, but it’s also the most commonly used loop.
 
-[source]
-----
-for (begin; condition; step) {
+In Python, the for loop is very powerful. It has a number of different forms, including one which is remarkably simple.
 
-    # execute the code statements 
-    # in the loop body
-
-}
-----
-
-Here's one where we go from 1 to 5.
+Maybe we have a list of donuts. 
+And we want to print out each one.
 
 [source]
 ----
-for(j = 1; j < 6;  j++){
+list_of_donuts = ["chocolate", "glazed", "jelly"]
+
+for donut in list_of_donuts:
+    print(donut)
+
+# you'll see as output
+chocolate
+glazed
+jelly
+----
+
+This is called a *for-each* loop.
+It steps thru the list, and *For Each* donut in list_of_donuts, it does whatever the code in its block specifies - here just printing out the donut.
+It has the ability to iterate over the items of any sequence, such as a list or a string.
+A _sequence_ here is a list, or a string, or a couple of other data structures we haven't yet talked about.
+
+Just like slicing a string, a list (or any *sequence of data*) can be thought of a series of data point where the *index* start at zero and goes to *len(thing)-1*.
+Just like a string "hello" which goes from 0..4, our donut list goes from 0..2 - in this example you see the *range()* function for the first time. And in python code, you see a lot of range().
+
+[source]
+----
+list_of_donuts = ["chocolate", "glazed", "jelly"]
+
+for index in range(len(list_of_donuts)):
+    print(list_of_donuts[index])
+----
+
+Here the index was set to 0 and then 1, and then 2, and the index was used to retrieve from the list the donut name at the index. list_of_donuts[1] is "glazed". This example's out is the same as the for-each loop above.
+
+Let's use range() is much more common usage.
+
+Here's one where we go from 0 to 4.
+
+[source]
+----
+for j in range(5):
     # loop body code
-    print(j);
-}
+    print(j)
 ----
 
-This loop will print out: 
+Notice how in this case, the loop prints out 0..4!
+
+Now say we wanted to print out the sum of all the numbers from 1 to 10.
+
+[]
+----
+# performing sum of 1 to 10
+sum = 0
+for i in range(1, 11): 
+    sum = sum + i 
+print("Sum of first 10 natural numbers is ", sum)
+----
+
+Wait! Notice how we have to ask range to *one beyond* the last number we want added to the sum! 
+That's because the range starts at 0 and includes every whole number up to, but *not including*, the number that you have provided as the stop number.
+
+There are three versions to the range()'s mechanism.
+
+- range(stop) when you provide one number it acts as the stop value.
+- range(start, stop) when you provide two numbers, the first is start, the second is stop.
+- range(start, stop, step) when you provide three, they are taken to mean start, stop and step.
+
+So if you have:
+
+- range(5) gives 0, 1, 2, 3, 4
+- range(2, 5) gives 2, 3, 4
+- range(1, 8, 2) gives 1, 3, 5, 7
+
+Let's show you a glimpse of the *break* statement.
 
 [source]
 ----
-# print 
-1 
-2 
-3 
-4 
-5 
-----
+for p in range(1,6):
+    if p == 4:
+        break
 
-Notice how there are THREE parts to the FOR loop's mechanism. 
-
-* begin: j = 1  # Executes once upon entering the loop.
-* condition: j < 6  # Checked before every loop iteration. If false, the loop stops.
-* loop step: j++  # Executes after the body on each iteration.
-
-and
-
-* body:	print()  # Runs again and again while the condition is true.
-
-Let's show you another glimpse of the *break* statement.
-
-[source]
-----
-for(p = 1; p < 6; p++){
-    if(p === 4){
-        break;
-    }
-print("Loop " + p + " times");
-}	
+print("Loop " + str(p) + " times")
 ----
 
 Jumps out of the loop when p is equal to 4.
 
-
-
-[TIP]
-====
-* Print from 10 to 1 with a for loop and a while loop (hint use decrement)
-* Write a loop that prints 1 - 5 but break out at 3
-====
-
-[TIP]
-====
-Stretch Goal: S/he who dares wins!
-
-* Go back to Arrays
-* Look at an array of donuts
-* Create an array of donuts
-* Loop through the array of donuts and print each donut string
-====
-
-You can do it, I know you can!
+What about if we print from 10 to 1 with a for loop and a while loop (hint: we need to decrement).
 
 [source]
 ----
-for(x = 0; x < donuts.length; x++){
-    print(donuts[x]);
-}
+for p in range(10, 0, -1):
+    print(p)
 ----
+Look, we had to range(10, 0, -1) to get the one to print. Otherwise if we had had used range(10,1,-1), we would have only printed 10 to 2.
 
-If you had something like this, buy yourself a donut, you deserve it.
+The *range()* function gets used a lot in Python, and is the envy of many programmers in other languages who have use the *for* loop that was handed down from the C programming language.
+So use it widely, and don't gloat -- too much :-)
