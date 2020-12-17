@@ -3,40 +3,34 @@
 
 A function is a block of code designed to perform a particular task. A function encloses a set of statements and is a fundamental modular unit of Python. They you reuse code, and provide a way for you to organize your programs, keeping them easier to understand and easier to modify. It's often said that the craft of programming is the creation of a set of functions and data structures which implement a solution to some problem or set of requirements.
  
-Functions are objects, like many things in Python. They can be stored in variables, other objects, or even collected into arrays. Functions are very powerful because in Python, they can be passed as arguments to other functions, returned from functions, and can even have method-functions attached to them. The most important thing that functions can do is get *invoked*.
+Functions are objects, like many things in Python. They can be stored in variables, other objects, or even collected into lists. 
+Functions are very powerful because in Python, they can be passed as arguments to other functions and returned from functions. 
+The most important thing that functions can do is get *invoked*.
 
 You create functions easily.
 
-=== Function Literal
+=== Function Definition
 
-Two examples of how you write a function literal:
-
-[source]
-----
-add = function (parameter1, parameter2) {
-    return parameter1 + parameter2; 
-}
-----
+An example of how you write a function definition:
 
 [source]
 ----
-function add(p1, p2) {
-    return p1 + p2;
-}
+def add(p1, p2):
+    return p1 + p2
+
 ----
 
-In both of these cases, you end up with a function named 'add' that takes two parameters and adds them, returning the result. (Yes, you could just write (p1 + p2) and everyone would understand. It's just a very simple example.) Here is another example:
+You end up with a function named 'add' that takes two parameters and adds them, returning the result. (Yes, you could just write (p1 + p2) and everyone would understand. It's just a very simple example.) Here is another example:
 
 === Creating a Function
 
 [source]
 ----
-function greetUser(username) {
-    print( "Hello " + username);
-    return;
-}
+def greetUser(username):
+    print( "Hello " + username)
+    return
 
-//calling/Invoking the function
+# calling/Invoking the function
 greetUser("Mike Jones"); # "Hello Mike Jones"
 ----
 
@@ -48,54 +42,43 @@ Imagine we have a program that gets an airplane ready for flight. We can imagine
 
 [source]
 ----
-function prepFlight(airplane) {
-    loadBaggage(airplane);
-    loadPassengers(airplane);
+def prepFlight(airplane):
+    loadBaggage(airplane)
+    loadPassengers(airplane)
 
-    loadFuel(airplane);
-    performPreflightChecklist(airplane.copilot);
-    askTowerToDepart(airplane.pilot);
-    departGate(airplane);
+    loadFuel(airplane)
+    performPreflightChecklist(airplane[copilot])
+    askTowerToDepart(airplane[pilot])
+    departGate(airplane)
 
-    taxiToRunway(airplane, mainRunway90);
-    takeoff(airplane.pilot, airplane);
+    taxiToRunway(airplane, mainRunway90)
+    takeoff(airplane[pilot], airplane)
 
-    return;
-}
+    return
+
 ----
 
 You can see how functions you perform different things in a particular order, and while you might have no idea _how_ 'loadBaggage' does what it does, you can see how the program preps the airplane object for flight and makes sure everything important is done. Each of the functions from 'loadBaggage' to 'takeoff' is invoked and returns so the next one can be invoked. This is the power of functions - the ability to take some code and put it a function so that it much easier to understand.
 
-=== Anonymous Functions
+=== Lambda Functions
 
-A common pattern used in Python revolves around an *anonymous* function. It's a function without a name, and one that probably only gets called _once_. Something like:
-
-[source]
-----
-function () {
-    x = 5;
-    y = 4;
-    while (x < 100) {
-        x = x + y;
-    }
-    print("x is", x);
-} () ;
-----
-
-Look at that last line. What's going on here? Well, first we are creating a function object _without a name_ (so it's _anonymous_). Then on the last line, we are _invoking_ the function once (see those two parentheses? '()'?), so all the code inside gets run. (x get printed out).
-
-You see this often in Python. It's a way to put some code into an argument to another function call.
+A common pattern used in Python revolves around an *lambda* function. Something like:
 
 [source]
 ----
-milliSecInASecond = 1000;
+double = lambda x: x * 2
 
-setTimeout(function () {
-    print('We waited for 5 seconds, to print this')
-}, 5 * milliSecInASecond);
+print(double(5))
 ----
 
-See how we pass an anonymous function to 'setTimeout' as one argument, and a timer value as the second argument? The idea here is that the anonymous function gets called at 5 seconds in the future. (Like scheduling an alarm to do something in 5 seconds).
+This gives us another way to wrap up a little code into a function. We could redo the first example in this chapter with a lambda function.
+
+[source]
+----
+add2 = lambda p1, p2: p1 + p2
+
+print(add2(5,7))
+----
 
 === Function Return
 
@@ -103,12 +86,10 @@ Once Python reaches a return statement, the function will stop executing. Functi
 
 [source]
 ----
-function greetUser(username) {
-    return "Hello " + username;
-}
+def greetUser(username):
+    return "Hello " + username
 
-result = greetUser("Welcome back, Mike Jones");
-
+result = greetUser("Welcome back, Mike Jones")
 print(result); # will print "Hello Welcome back, Mike Jones" 
 ----
 
@@ -116,14 +97,14 @@ Or like this:
 
 [source]
 ----
-function determineWinner(home, visitor) {
-    if (home.score > visitor.score) {
+def determineWinner(home, visitor):
+    if (home[score] > visitor[score]):
         return "Home Team Wins! Let's have a Parade!"
-    } else if (home.score < visitor.score) {
+    elif (home[score] < visitor[score]):
         return "Visitors Win! (oh Well)"
-    }
+
     return "It's a Tie!"
-}
+
 ----
 
 Notice how in this case, we check to see the scoring results with two conditions (which are, what? yes, _boolean expressions_). If neither condition is true, the third one must be the case. But if either condition is true, then we return right away, and the function is done.
@@ -133,51 +114,45 @@ Again, to be clear, we might use this function like this:
 [source]
 ----
 
-home = {
-    name = "Fightin Cats"
-    score = 0;
-}
+home = {'name': "Fightin Cats", 'score': 0 }
 
 visitor = {
-    name = "Wild Horses"
-    score = 0;
+    'name': "Wild Horses",
+    'score': 0
 }
 
-playGame(home, visitor); # a lot of work done in this function(!)
+playGame(home, visitor) # a lot of work done in this function(!)
 
 # game is done
-result = determineWinner(home, visitor);
+result = determineWinner(home, visitor)
 
 # and then print the result..
-print(result);
+print(result)
 ----
 
 === Function Parameters
 
-Functions can also take parameters to be used within a function. 
+As you just saw, functions can also take parameters to be used within a function. 
 
 [source]
 ----
-function addThreeNumbers(a, b, c) {
-    return (a + b + c);
-}
+def addThreeNumbers(a, b, c):
+    return (a + b + c)
 
-function determineWinner(home, visitor) {
-    if (home.score > visitor.score) {
+def determineWinner(home, visitor):
+    if (home['score'] > visitor['score']):
         return "Home Team Wins! Let's have a Parade!";
-    } else if (home.score < visitor.score) {
+    elif (home['score'] < visitor['score']):
         return "Visitors Win! (oh Well)";
-    }
-    return "It's a Tie!";
-}
 
-function makeNegative(number) {
-    if (number > 0) {
-        return -(number);
-    }
+    return "It's a Tie!"
+
+def makeNegative(number):
+    if (number > 0):
+        return -(number)
     # already negative, it's less than 0
-    return number;
-}
+    return number
+
 ----
 
 Remember how we had the expression ot see if a number was even? ( x % 2 === 0)
@@ -185,16 +160,16 @@ Now, here's a way to decide is number was divisible cleanly by another, it's a s
 
 [source]
 ----
-(number % divisor === 0)
+(number % divisor == 0)
 ----
 
 So to see if a number is even, we could use '(number % 2 == 0)':
 
 [source]
 ----
-print((8 % 2 === 0)); # true
-print((7 % 2 === 0)); # false
-print((4 % 2 === 0)); # true
+print((8 % 2 == 0)); # true
+print((7 % 2 == 0)); # false
+print((4 % 2 == 0)); # true
 ----
 And we can use the same technique to see if a number is evenly divisible by 3 or 5.
 
@@ -232,12 +207,15 @@ Well, here's one solution:
 ----
 # Function ZipCoder
 
-function zipCoder(aNumber) {
-if (aNumber % 15 == 0) print("ZipCoder");
-else if (aNumber % 3 == 0) print("Zip");
-else if (aNumber % 5 == 0) print("Coder");
-}
+def zipCoder(aNumber):
+    if (aNumber % 15 == 0):
+        print("ZipCoder")
+    elif (aNumber % 3 == 0):
+        print("Zip")
+    elif (aNumber % 5 == 0):
+        print("Coder")
 
-zipCoder(45); # -> ZipCoder
+
+zipCoder(45) # -> ZipCoder
 ----
 
