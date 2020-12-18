@@ -1,7 +1,7 @@
 :title-page:
 = Zip Code Wilmington's Programming in Python
 Kristofer Younger <kris@zipcodewilmington.com>
-v1.8.3, 2020-09-25
+v1.1, 2020-12-18
 :doctype: book
 :imagesdir: images
 :source-highlighter: rouge
@@ -148,7 +148,7 @@ include::functions.adoc[]
 include::return.adoc[]
 include::dictionary.adoc[]
 include::modules.adoc[]
-include::objectsmethod.adoc[]
+include::objectsmethods.adoc[]
 include::appendixa.adoc[]
 include::appendixb.adoc[]
 
