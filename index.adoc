@@ -148,7 +148,7 @@ include::functions.adoc[]
 include::return.adoc[]
 include::dictionary.adoc[]
 include::modules.adoc[]
-include::objectsmethod-functions.adoc[]
+include::objectsmethod.adoc[]
 include::appendixa.adoc[]
 include::appendixb.adoc[]
 

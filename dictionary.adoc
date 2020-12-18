@@ -1,0 +1,89 @@
+
+=== Dictionaries
+
+Dictionaries are sometimes found in other languages as “associative memories” or “associative arrays”. 
+Unlike sequences, which are indexed by a range of numbers, dictionaries are indexed by keys, which can be any immutable type; strings and numbers can always be keys. 
+
+It is best to think of a dictionary as a set of key: value pairs, with the requirement that the keys are unique (within one dictionary). 
+A pair of braces creates an empty dictionary: {}. 
+Placing a comma-separated list of key:value pairs within the braces adds initial key:value pairs to the dictionary; this is also the way dictionaries are written on output.
+
+Creating a dictionary is easy:
+
+[source]
+----
+phonenumbers = {'Sam': 6554098, 'Jade': 6554139}
+----
+
+Modifying a dictionary and getting values from them is very easy.
+
+[source]
+----
+# get Sam's number
+currentPhone = phonenumbers["Sam"]
+
+# we can also update a value
+phonenumbers['Jade'] = 6551439
+
+# you can delete pairs too
+del phonenumbers["Sam"]
+----
+
+You can add another dictionary key:value pairs.
+
+[source]
+----
+# we can also add a new key:value pair.
+phonenumbers['Sadie'] = 6551004
+----
+
+We can print it out.
+
+[source]
+----
+# we can also add a new key:value pair.
+print(phonenumbers)
+
+# output is
+# {'Sam': 6554098, 'Jade': 6554139, 'Sadie': 6551004}
+----
+
+And one of the very cooler aspects is the testing of whether or not a key is in the dictionary. You use _in_ and _not in_ to determine
+
+[source]
+----
+if 'Sam' in phonenumbers: # -> True
+    doSomething()
+
+if 'Guido' not in phonenumbers: # -> False
+    figureOutWhyNot()
+----
+
+We could use them to hold information about some object we're holding data about.
+
+[source]
+----
+vehicle1 = {
+    'Name': "Lunar Lander"
+    'Altitude': 8000,
+    'Speed': 1000,
+    'Fuel': 12000,
+}
+----
+
+Or this dictionary
+
+[source]
+----
+katniss = {
+    'firstname': "Katniss",
+    'lastname': "Everdene",
+    'homedistrict': 12,
+    'skills': ["foraging", "wildlife", "hunting", "survival"]
+}
+----
+
+Dictionaries are a tremendous tool. 
+They are used in many places within Python systems.
+Dictionaries are built-in data types in Python that associate (map) keys to values, forming key-value pairs.
+You can access, add, modify, and delete key-value pairs.
