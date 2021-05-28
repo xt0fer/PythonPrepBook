@@ -1,5 +1,6 @@
 
-=== Dictionaries
+
+== Dictionaries
 
 Dictionaries are sometimes found in other languages as “associative memories” or “associative arrays”. 
 Unlike sequences, which are indexed by a range of numbers, dictionaries are indexed by keys, which can be any immutable type; strings and numbers can always be keys. 
@@ -8,12 +9,16 @@ It is best to think of a dictionary as a set of key: value pairs, with the requi
 A pair of braces creates an empty dictionary: {}. 
 Placing a comma-separated list of key:value pairs within the braces adds initial key:value pairs to the dictionary; this is also the way dictionaries are written on output.
 
+=== Creating a Dictionary
+
 Creating a dictionary is easy:
 
 [source]
 ----
 phonenumbers = {'Sam': 6554098, 'Jade': 6554139}
 ----
+
+=== Modifying a Dictionary
 
 Modifying a dictionary and getting values from them is very easy.
 
@@ -48,6 +53,8 @@ print(phonenumbers)
 # {'Sam': 6554098, 'Jade': 6554139, 'Sadie': 6551004}
 ----
 
+=== Testing for a Key
+
 And one of the very cooler aspects is the testing of whether or not a key is in the dictionary. You use _in_ and _not in_ to determine
 
 [source]
@@ -64,7 +71,7 @@ We could use them to hold information about some object we're holding data about
 [source]
 ----
 vehicle1 = {
-    'Name': "Lunar Lander"
+    'Name': "Mars Lander"
     'Altitude': 8000,
     'Speed': 1000,
     'Fuel': 12000,
@@ -84,6 +91,7 @@ katniss = {
 ----
 
 Dictionaries are a tremendous tool. 
-They are used in many places within Python systems.
+They are used in many, many places within Python systems.
 Dictionaries are built-in data types in Python that associate (map) keys to values, forming key-value pairs.
 You can access, add, modify, and delete key-value pairs.
+

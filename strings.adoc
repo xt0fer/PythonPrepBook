@@ -197,7 +197,12 @@ print(rapper[4:])  # ila
 
 print(rapper[1:4])  # ika
 print(rapper[1:3]) # ik
+----
 
+How about a few more?
+
+[source]
+----
 print(rapper[:-2]) # mikai
 print(rapper[-2:]) # la
 print(rapper[5:]) # la

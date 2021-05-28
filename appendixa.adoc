@@ -90,3 +90,4 @@ total = sum([item['price'] for item in groceries])
 
 This example step through the grocery list, pulling out each item, and the item['price'] pulls out the price and places it in a list.
 When loop is done, the sum() function sums and returns all the prices in the list.
+

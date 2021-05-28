@@ -1,3 +1,4 @@
+
 ==  Return statement
 
 The *return* statement is a very simple one. It just finishes the running of code in the current function and "returns" to the function's caller.
@@ -39,3 +40,4 @@ if (continuePlaying == playerDead):
 You can see how when we call the function "adjustHealth()" it returns either playerAlive or playerDead, and we make a decision to end the game if the player has died.
 
 Notice too, you can have multiple return statements in functions, and each one can return a different value if that's what you need.
+

@@ -41,7 +41,7 @@ While you're not thinking about the long term, or about large Python programs, t
 
 In your program, you can write stuff that Python will ignore, it's just there for you (or readers of your code). 
 We use a 'hash character' to start a comment, and the comment goes to the end of the line.
-Javascript will ignore anything on a line after a hash character. "#"
+Python will ignore anything on a line after a hash character. "#"
 
 [source]
 ----
@@ -134,9 +134,14 @@ kilometersCycled = numberOfHoursPedalled \
 
 When you come across code that goes onto multiple lines, do like Python does, look for the backslash, when you find it, think of the line being spread out.
 
-=== Block Statement
+=== Block Statement & Indentation
 
 Very often in Python, we will see a *block* of statements. It is a list of statements _indented_ the same amount. (Yes, unlike many languages, in Python, _white space is important_.) It acts like a container to make clear what statements are included in the block.
+
+It is _so important_ that indentation, and making sure you have everything aligned properly, is one of the most important thing to learn about Python when you are a beginner.
+Many a beginner discovers that the braces _{ }_ that other languages use to manage the way code is grouped together are missing from Python. Java, JavaScript, and many other languages use braces to handle how code gets grouped together.
+
+Not Python, that's why is _SO_ very important to get it right.
 
 [source]
 ----
@@ -144,6 +149,10 @@ if (magePower > 120.0):
     maxMagic = 500.0
     lifeSpan = 800.0
     maxWeapons = magePower / maxPowerPerWeapon
+    if (maxWeapons < 150):
+        print('You have too many weapons!')
+    else:
+        backpack.load()
 
 # some more code
 print(magePower, "is your Mage's Power rating.")
@@ -151,6 +160,17 @@ print(magePower, "is your Mage's Power rating.")
 
 See those SPACES (and confusingly, they might be TABs but you cannot tell that by looking at the line). 
 All the indented lines below the IF statement are part of what gets run when the IF is True.
+Then you also see a nested IF below that, one that has an _else_ statement. 
+But the key thing is to look at the lines of code and notice how they are _indented_, because that tells what you
+need to know about how the program works, and what gets done depending on the states of the variables.
+(Don't worry, we will be going into all this a lot more carefully later.)
+
+Editing tools that let you work on Python do their best make the indentations are correct, but it is a common
+problem for beginner Python programmers to think the indentation isn't important and spend far too much time
+tracking down silly indentation errors.
+
+So, the wise Python beginner spends a fair amount of time making sure the details are exact on indentation.
+Making sure code is indented correctly is part of being a Pythonista.
 
 Indentation is rejected as inconsistent if the code mixes tabs and spaces it gets flagged as an error in the code; a TabError is raised in that case.
 

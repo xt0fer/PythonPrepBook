@@ -1,8 +1,8 @@
 
 [appendix]
-== Lunar Lander
+== Mars Lander
 
-This is some code to show you how you might write a simple lunar lander simulation in Python. It's taken from history, way back in the 1970's - this idea was passed around as some of the very first open source.
+This is some code to show you how you might write a simple Mars lander simulation in Python. It's taken from history, way back in the 1970's - this idea was passed around as some of the very first open source.
 
 Meant as an example of a longer program (159 lines) to get you thinking, it's really not very complicated. 
 The general idea is you have a series of "burns" in a list, and the game (or simulator, if you will) steps through the list applying each burn. 
@@ -12,7 +12,7 @@ The tricky bit would be for you to figure out what `burnArray` would be used to 
 
 [source]
 ----
-# Lunar Lander Source Code.
+# Mars Lander Source Code.
 import math
 import random
 
@@ -37,8 +37,8 @@ def randomheight():
 
 def gameHeader():
     s = ""
-    s = s + "\nLunar Lander - Version " + version + "\n"
-    s = s + "This is a computer simulation of an Apollo lunar landing capsule.\n"
+    s = s + "\nMars Lander - Version " + version + "\n"
+    s = s + "This is a computer simulation of an Apollo Mars landing capsule.\n"
     s = s + "The on-board computer has failed so you have to land the capsule manually.\n"
     s = s + "Set burn rate of retro rockets to any value between 0 (free fall) and 200\n"
     s = s + "(maximum burn) kilo per second. Set burn rate every 10 seconds.\n" 

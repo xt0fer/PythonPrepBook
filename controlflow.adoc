@@ -11,7 +11,26 @@ q = j * 4 - 20
 print(q) # -> 0
 ----
 
-When programs start to get more sophisticated, the _control flow_ can be changed. There are various conditional statements, loop statements, and functions that can cause the control flow to move around within the code. Here we see using both a loop and a conditional IF statement to change the flow of control.
+When programs start to get more sophisticated, the _control flow_ can be changed. 
+
+[source]
+----
+peoplePerTable = 5
+tables = 8
+
+maximumRoomOccupancy = tables * peoplePerTable
+# up to this point we just stepped line by line
+
+if (bridesDesiredPartySize > maximumRoomOccupancy):
+    canHandleThisReception = False
+else:
+    canHandleThisReception = True
+----
+
+See how the IF statement can change a variable based on a decision about another variable?
+We are changing the _control flow_ based on the state of the data within the program!
+
+There are various conditional statements, loop statements, and functions that can cause the control flow to move around within the code. Here we see using both a loop and a conditional IF statement to change the flow of control.
 
 [source]
 ----
@@ -25,4 +44,7 @@ while (j > 0) :
         print("q is still positive")
 ----
 
-This ability to manipulate the control flow of a program is very important when you start developing logic for your apps and programs. Logic in programs depends heavily on being able to manipulate the control flows through the code. Let's take a look at how each kind of statement allows a programmer to change the flow of control in programs.
+This ability to manipulate the control flow of a program is very important when you start developing logic for your apps and programs. 
+Logic in programs depends heavily on being able to manipulate the control flows through the code. 
+Let's take a look at how each kind of statement allows a programmer to change the flow of control in programs.
+

@@ -1,7 +1,10 @@
 
 == Lists
 
-Lists are a very powerful idea in many programming languages. Let's start with *why* we need them.
+Lists are a very powerful idea in many programming languages. 
+In Python, Lists are one of the most important built-in tools of the language.
+You need to master lists.
+Let's start with *why* we need them.
 
 Imagine you have a small number of things you want to track. Let's use our vague computer game we've been using for an example. The game has 5 players, friends that get together over the internet to play a dungeon game.
 
@@ -33,7 +36,8 @@ Now, like a _string_, list indexes start at zero.
 playerHealthScores = [100, 100, 100, 100, 100];
 ----
 
-This list is a *data structure* - a way for us to keep track of lots of data in a controlled fashion. (We can make lists any size.)
+This list is a *data structure* - a way for us to keep track of lots of data in a controlled fashion.
+(We can make lists any size, a list with a million things in it is not unreasonable.)
 If we need to deduct health points from one of the players, we can do something like this:
 
 [source]
@@ -130,4 +134,7 @@ donuts.append("powdered")    # -> ["chocolate", "glazed", "jelly", "strawberry",
 
 print(donuts[len(donuts) - 1]) # powdered
 ----
+
+Some computer languages have _arrays_.
+Python's *Lists* are like arrays and even more powerful.
 

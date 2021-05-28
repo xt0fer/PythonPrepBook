@@ -1,8 +1,9 @@
+
 == Simple Calculation Programs
 
 === How far can we go in the car?
 
-Let's create a simple problem to solve with Javascript.
+Let's create a simple problem to solve with Python.
 
 ****
 Our car's gas tank can hold 12.0 gallons of gas. 

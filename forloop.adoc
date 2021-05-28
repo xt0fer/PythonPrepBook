@@ -1,3 +1,4 @@
+
 === For Loop
 
 The *for* loop is more complex, but it’s also the most commonly used loop.
@@ -101,3 +102,4 @@ Look, we had to range(10, 0, -1) to get the one to print. Otherwise if we had ha
 
 The *range()* function gets used a lot in Python, and is the envy of many programmers in other languages who have use the *for* loop that was handed down from the C programming language.
 So use it widely, and don't gloat -- too much :-)
+

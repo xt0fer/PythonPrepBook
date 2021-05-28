@@ -1,3 +1,4 @@
+
 == Arithmetic Operators
 
 Python can do math. And many early programming problems you will come across deal with doing fairly easy math. There are ways to do lots of useful things with numbers. 
@@ -210,7 +211,7 @@ squareRootTwo = math.sqrt(2.0)
 print(squareRootTwo)
 ----
 
-We will get "1.4142135623730951" in the output. That number (squareRootTwo) 
+We will get "1.4142135623730951" twice in the output. That number (squareRootTwo) 
 is the square root of 2, and it is 
 the result of the function and _what the function sqrt "returns"'_.
 
@@ -234,4 +235,15 @@ Well, 6^2^ is the same as 6 * 6.
 And 6 * 6 = 36,
 then add 36 + 5 = 41.
 
-You'll learn a lot more about working with numbers in your career as a coder. This is really just the very basic of beginnings.
+[source]
+----
+squareRootTwo = math.pow(2, 0.5)
+print(squareRootTwo)
+----
+
+And notice, when we raise a number to the _0.5_ power, it's *the same as taking its square root!*.
+And that can be handy sometimes.
+
+You'll learn a lot more about working with numbers in your career as a coder. 
+This is really just the very basics of the very beginnings.
+

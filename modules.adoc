@@ -1,3 +1,4 @@
+
 == Modules
 
 In Python, modules allow for code to  loaded into a program only if it is needed. Modules are one of the advanced topics in Python that we won't spend too much time on, but here are the basics.
@@ -33,4 +34,6 @@ There are millions of chunks of Python you can find and use in your code.
 A lot of it is used by many, many people, and it's important to know where the code you use comes from. 
 It can be dangerous to use someone else's code that isn't trustworthy.
 
-See https://docs.python.org/3/tutorial/modules.html for more on modules! Look for information on "import" to see how modules interact with your code.
+See https://docs.python.org/3/tutorial/modules.html for more on modules! 
+Look for information on "import" to see how modules interact with your code.
+

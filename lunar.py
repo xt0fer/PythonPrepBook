@@ -1,4 +1,4 @@
-# Lunar Lander Source Code.
+# Mars Lander Source Code.
 import math
 import random
 
@@ -23,8 +23,8 @@ def randomheight():
 
 def gameHeader():
     s = ""
-    s = s + "\nLunar Lander - Version " + version + "\n"
-    s = s + "This is a computer simulation of an Apollo lunar landing capsule.\n"
+    s = s + "\nMars Lander - Version " + version + "\n"
+    s = s + "This is a computer simulation of an Apollo Mars landing capsule.\n"
     s = s + "The on-board computer has failed so you have to land the capsule manually.\n"
     s = s + "Set burn rate of retro rockets to any value between 0 (free fall) and 200\n"
     s = s + "(maximum burn) kilo per second. Set burn rate every 10 seconds.\n" 
