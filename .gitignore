@@ -24,3 +24,5 @@ hs_err_pid*
 
 index.pdf
 EPUB/index.epub
+*.epub
+*.pdf
