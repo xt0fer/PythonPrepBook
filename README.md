@@ -16,4 +16,3 @@ asciidoctor-pdf -v
 to generate targets:
 use `asciidoctor-pdf index.adoc` to get index.pdf
 use `/usr/local/bin/asciidoctor-epub3 -D EPUB index.adoc` to get EPUB/index.epub
-
