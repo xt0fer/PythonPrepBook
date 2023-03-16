@@ -13,7 +13,7 @@ This program just prints "Hello, World!". footnote:[And while you might _not yet
 
 Printing goes to "standard output", a place Python uses to communicate with a user (in this case, us, the programmers.)
 
-(And if you haven't done it yet, go to https://code.zipcode.rocks and make a browser bookmark for yourself. Once that's done, you can use that REPL footnote:[a REPL is short for "read-evaluate-print loop", a special kind of computer program that lets you run code of a given language.] as a place where you can type in the code from this book and run it to see what each code snippet does.)
+(And if you haven't done it yet, go to https://code.zipcode.rocks and make a browser bookmark for yourself. Once that's done, you can use that REPL footnote:[a REPL is short for "read-evaluate-print loop", a special kind of computer program that lets you run code of a given language.] as a place where you can type in the code from this book and run it to see what each code snippet does. We run `python3` in this book. Don't use python version 2. `python3` is what the pros use.)
 
 We will use `print` to do a lot in the coming pages.
 

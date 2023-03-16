@@ -1,7 +1,7 @@
 :title-page:
 = Zip Code Wilmington's Programming in Python
 Kristofer Younger <kris@zipcodewilmington.com>
-v1.1.4, 2021-05-26
+v1.1.5, 2023-03-16
 :doctype: book
 :imagesdir: images
 :pdf-theme: pypreptheme.yml
@@ -140,10 +140,12 @@ include::variables.adoc[]
 include::operators.adoc[]
 
 ifdef::backend-pdf[<<<]
+
 include::arithmeticexpr.adoc[]
 
 
 ifdef::backend-pdf[<<<]
+
 include::simplecalc.adoc[]
 
 include::booleanexpr.adoc[]
