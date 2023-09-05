@@ -1,7 +1,7 @@
 :title-page:
 = Zip Code Wilmington's Programming in Python
 Kristofer Younger <kris@zipcodewilmington.com>
-v1.1.5, 2023-03-16
+v1.1.6, 2023-09-05
 :doctype: book
 :imagesdir: images
 :pdf-theme: pypreptheme.yml
@@ -19,7 +19,7 @@ v1.1.5, 2023-03-16
 Zip Code Wilmington's Programming in Python
 by Kristofer Younger
 
-Copyright (C) 2020, 2021 by Zip Code Wilmington. All Rights Reserved.
+Copyright (C) 2020 - 2023 by Zip Code Wilmington. All Rights Reserved.
 
 Cover Design: Janelle Bowman
 
@@ -65,7 +65,8 @@ Finally, because in this book all we aim to teach you is "programming in the sma
 
 ==== You'll learn it eventually
 
-The truth is, in today's coding world, all of us eventually learn to do things with Python. (I've said ths about JavaScript too.) 
+The truth is, in today's coding world, all of us eventually learn to do things with Python. (I've said this about JavaScript too.) 
+And as of 2023, it's perhaps the world's most popular programming language.
 So, start early, get comfortable with it, and then go on and study other computer languages like Java or JavaScript. 
 Python will always be there, waiting patiently for you to return. 
 And hey, if you've already learned Java, you might find this book helpful - bridging languages is a great skill for a developer to have.
